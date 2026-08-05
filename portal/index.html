@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postiz Control Center</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #0b0a0f;
+      --card-bg: rgba(25, 22, 35, 0.45);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f3f0f7;
+      --text-muted: #a39eb0;
+      
+      --color-postiz: #9900e6;
+      --color-postiz-glow: rgba(153, 0, 230, 0.35);
+      --color-temporal: #2196f3;
+      --color-temporal-glow: rgba(33, 150, 243, 0.35);
+      --color-spotlight: #ff2a5f;
+      --color-spotlight-glow: rgba(255, 42, 95, 0.35);
+      
+      --status-online: #10b981;
+      --status-offline: #ef4444;
+      --status-checking: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient glowing background blobs */
+    .glow-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      z-index: 0;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .blob-1 {
+      width: 450px;
+      height: 450px;
+      background: var(--color-postiz);
+      top: -100px;
+      left: -100px;
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .blob-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--color-temporal);
+      bottom: -100px;
+      right: -100px;
+      animation: float 25s infinite ease-in-out reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, -40px) scale(1.1); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      padding: 40px 24px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fff 30%, #b266ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 28px;
+      width: 100%;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+
+    /* Card branding and glowing borders */
+    .card-postiz::before { background: var(--color-postiz); }
+    .card-temporal::before { background: var(--color-temporal); }
+    .card-spotlight::before { background: var(--color-spotlight); }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .card-postiz:hover { box-shadow: 0 20px 40px var(--color-postiz-glow); }
+    .card-temporal:hover { box-shadow: 0 20px 40px var(--color-temporal-glow); }
+    .card-spotlight:hover { box-shadow: 0 20px 40px var(--color-spotlight-glow); }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .icon-postiz { background: linear-gradient(135deg, #cc33ff, #7700b3); }
+    .icon-temporal { background: linear-gradient(135deg, #33adff, #0066b3); }
+    .icon-spotlight { background: linear-gradient(135deg, #ff4d79, #b3002d); }
+
+    /* Pulsing status indicator */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--status-checking);
+    }
+
+    .status-online .status-dot {
+      background-color: var(--status-online);
+      box-shadow: 0 0 10px var(--status-online);
+      animation: pulse 1.8s infinite;
+    }
+
+    .status-offline .status-dot {
+      background-color: var(--status-offline);
+      box-shadow: 0 0 10px var(--status-offline);
+    }
+
+    .status-checking .status-dot {
+      background-color: var(--status-checking);
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.15); }
+    }
+
+    .card-body h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-postiz {
+      background: linear-gradient(135deg, var(--color-postiz) 0%, #b266ff 100%);
+      box-shadow: 0 4px 15px rgba(153, 0, 230, 0.2);
+    }
+
+    .btn-temporal {
+      background: linear-gradient(135deg, var(--color-temporal) 0%, #66b2ff 100%);
+      box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+    }
+
+    .btn-spotlight {
+      background: linear-gradient(135deg, var(--color-spotlight) 0%, #ff668c 100%);
+      box-shadow: 0 4px 15px rgba(255, 42, 95, 0.2);
+    }
+
+    .card-btn:hover {
+      opacity: 0.92;
+      transform: scale(1.02);
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    footer a {
+      color: #b266ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Simple animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+
+  <div class="container">
+    <header>
+      <h1>Postiz Control Center</h1>
+      <p>Single access dashboard for local Postiz development and workflow services</p>
+    </header>
+
+    <div class="cards-grid">
+      
+      <!-- Postiz Main Console -->
+      <div class="card card-postiz">
+        <div class="card-header">
+          <div class="card-icon icon-postiz">P</div>
+          <div class="status-badge status-checking" id="badge-postiz">
+            <div class="status-dot"></div>
+            <span id="text-postiz">Checking...</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h2>Postiz Console</h2>
+          <p>Schedule, preview, and deploy your social media content across integrated networks.</p>
+          <a href="http://localhost:4007" target="_blank" class="card-btn btn-postiz">
+            Launch Console
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Temporal Dashboard -->
+      <div class="card card-temporal">
+        <div class="card-header">
+          <div class="card-icon icon-temporal">T</div>
+          <div class="status-badge status-checking" id="badge-temporal">
+            <div class="status-dot"></div>
+            <span id="text-temporal">Checking...</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h2>Temporal UI</h2>
+          <p>Monitor your active queues, scheduled workflows, state transitions, and execution histories.</p>
+          <a href="http://localhost:8080" target="_blank" class="card-btn btn-temporal">
+            Open Temporal UI
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sentry Spotlight -->
+      <div class="card card-spotlight">
+        <div class="card-header">
+          <div class="card-icon icon-spotlight">S</div>
+          <div class="status-badge status-checking" id="badge-spotlight">
+            <div class="status-dot"></div>
+            <span id="text-spotlight">Checking...</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h2>Spotlight Console</h2>
+          <p>Debug exception events, errors, performance bottlenecks, and trace logs in real-time.</p>
+          <a href="http://localhost:8969" target="_blank" class="card-btn btn-spotlight">
+            View Spotlight
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>Hosted on Google Cloud Run &bull; Managed with <a href="https://postiz.com" target="_blank">Postiz</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Live client-side connection ping checker
+    async function checkServiceStatus(url, badgeId, textId) {
+      const badge = document.getElementById(badgeId);
+      const textSpan = document.getElementById(textId);
+      
+      try {
+        // Send a no-cors request to probe if host is listening
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2000);
+        
+        await fetch(url, {
+          mode: 'no-cors',
+          cache: 'no-store',
+          signal: controller.signal
+        });
+        
+        clearTimeout(timeoutId);
+        
+        badge.className = 'status-badge status-online';
+        textSpan.textContent = 'Online';
+      } catch (err) {
+        badge.className = 'status-badge status-offline';
+        textSpan.textContent = 'Offline';
+      }
+    }
+
+    function runAllChecks() {
+      checkServiceStatus('http://localhost:4007', 'badge-postiz', 'text-postiz');
+      checkServiceStatus('http://localhost:8080', 'badge-temporal', 'text-temporal');
+      checkServiceStatus('http://localhost:8969', 'badge-spotlight', 'text-spotlight');
+    }
+
+    // Run status checks immediately and repeat every 8 seconds
+    runAllChecks();
+    setInterval(runAllChecks, 8000);
+  </script>
+</body>
+</html>

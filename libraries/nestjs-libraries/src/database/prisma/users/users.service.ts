@@ -105,4 +105,20 @@ export class UsersService {
   updateEmailNotifications(userId: string, body: EmailNotificationsDto) {
     return this._usersRepository.updateEmailNotifications(userId, body);
   }
+
+  isEmailWhitelisted(email: string) {
+    return this._usersRepository.isEmailWhitelisted(email);
+  }
+
+  getWhitelistedEmails() {
+    return this._usersRepository.getWhitelistedEmails();
+  }
+
+  addWhitelistedEmail(email: string) {
+    return this._usersRepository.addWhitelistedEmail(email);
+  }
+
+  removeWhitelistedEmail(id: string) {
+    return this._usersRepository.removeWhitelistedEmail(id);
+  }
 }

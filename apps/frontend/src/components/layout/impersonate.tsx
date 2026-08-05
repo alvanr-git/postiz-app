@@ -829,6 +829,21 @@ const ViewStats = () => {
   );
 };
 
+const ViewWhitelist = () => {
+  const t = useT();
+  const handleClick = useCallback(() => {
+    window.location.href = '/admin/whitelist';
+  }, []);
+  return (
+    <div
+      className="px-[10px] rounded-[4px] bg-green-700 text-white cursor-pointer whitespace-nowrap"
+      onClick={handleClick}
+    >
+      {t('manage_whitelist', 'Manage Whitelist')}
+    </div>
+  );
+};
+
 const ImportDebugPost = () => {
   const { openModal } = useModals();
   const t = useT();
@@ -1103,6 +1118,7 @@ export const Impersonate = () => {
                 <AddAnnouncement />
                 <ViewErrors />
                 <ViewStats />
+                <ViewWhitelist />
               </div>
             )}
           </div>

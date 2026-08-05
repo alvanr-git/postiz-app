@@ -1,5 +1,6 @@
 import {
   PrismaRepository,
+  PrismaService,
   PrismaTransaction,
 } from '@gitroom/nestjs-libraries/database/prisma/prisma.service';
 import { Injectable } from '@nestjs/common';
@@ -13,7 +14,8 @@ import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
 export class UsersRepository {
   constructor(
     private _user: PrismaRepository<'user'>,
-    private _transaction: PrismaTransaction
+    private _transaction: PrismaTransaction,
+    private _prisma: PrismaService
   ) {}
 
   async switchUserCredentials(currentUserId: string, targetUserId: string) {
@@ -254,6 +256,31 @@ export class UsersRepository {
         sendFailureEmails: body.sendFailureEmails,
         sendStreakEmails: body.sendStreakEmails,
       },
+    });
+  }
+
+  async isEmailWhitelisted(email: string) {
+    const whitelisted = await this._prisma.whitelistedEmail.findUnique({
+      where: { email: email.toLowerCase() },
+    });
+    return !!whitelisted;
+  }
+
+  async getWhitelistedEmails() {
+    return this._prisma.whitelistedEmail.findMany({
+      orderBy: { createdAt: 'desc' },
+    });
+  }
+
+  async addWhitelistedEmail(email: string) {
+    return this._prisma.whitelistedEmail.create({
+      data: { email: email.toLowerCase() },
+    });
+  }
+
+  async removeWhitelistedEmail(id: string) {
+    return this._prisma.whitelistedEmail.delete({
+      where: { id },
     });
   }
 }

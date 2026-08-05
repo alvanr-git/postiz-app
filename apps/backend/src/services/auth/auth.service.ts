@@ -21,15 +21,24 @@ export class AuthService {
     private _emailService: EmailService,
     private _providerManager: AuthProviderManager
   ) {}
-  async canRegister(provider: string) {
-    if (
-      process.env.DISABLE_REGISTRATION !== 'true' ||
-      provider === Provider.GENERIC
-    ) {
+  async canRegister(provider: string, email?: string) {
+    if (process.env.DISABLE_REGISTRATION !== 'true') {
       return true;
     }
 
-    return (await this._organizationService.getCount()) === 0;
+    const orgCount = await this._organizationService.getCount();
+    if (orgCount === 0) {
+      return true;
+    }
+
+    if (email) {
+      const whitelisted = await this._userService.isEmailWhitelisted(email.toLowerCase());
+      if (whitelisted) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   async routeAuth(
@@ -52,7 +61,7 @@ export class AuthService {
           throw new Error('Email already exists');
         }
 
-        if (!(await this.canRegister(provider))) {
+        if (!(await this.canRegister(provider, body.email))) {
           throw new Error('Registration is disabled');
         }
 
@@ -155,7 +164,7 @@ export class AuthService {
       return user;
     }
 
-    if (!(await this.canRegister(provider))) {
+    if (!(await this.canRegister(provider, providerUser.email))) {
       throw new Error('Registration is disabled');
     }
 
