@@ -69,5 +69,6 @@ We have hosted a lightweight Control Center portal on GCP that groups access to 
 
 This repository is integrated with **`graphify`** for structural analysis and codebase navigation:
 * **Pre-built Graph**: The knowledge graph directory `graphify-out/` is committed to the repository.
-* **Auto-Updates**: Local Git hooks are installed. When you run `git commit`, `graphify` will automatically compile semantic updates to the graph in the background.
+* **Auto-Updates**: Git hooks are automatically configured when you run `pnpm install` (via the postinstall script). When you commit code changes, the pre-commit hook runs `graphify` to incrementally update the AST graph database and automatically stage it (`git add graphify-out/`), ensuring your remote repository is always up-to-date.
 * **Antigravity Integration**: Antigravity configuration files are saved in `.agents/rules/graphify.md`. When opening this repository with Antigravity on *any* computer, the agent will immediately consume the graph to answer codebase layout and architecture questions with 100% accuracy.
+

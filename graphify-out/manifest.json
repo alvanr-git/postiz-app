@@ -3815,9 +3815,9 @@
     "semantic_hash": "a50341f962cd00d81cc174447a2b8741"
   },
   "package.json": {
-    "mtime": 1785933404.496077,
-    "ast_hash": "9759e80f94cff9fd9ba73f1f312cc69f",
-    "semantic_hash": "9759e80f94cff9fd9ba73f1f312cc69f"
+    "mtime": 1786729143.8286242,
+    "ast_hash": "6b4c5189a5c05afe9ee01888e46e1dae",
+    "semantic_hash": "6b4c5189a5c05afe9ee01888e46e1dae"
   },
   "portal/server.js": {
     "mtime": 1785935013.1392243,
@@ -3848,5 +3848,15 @@
     "mtime": 1785933404.5050771,
     "ast_hash": "5d725366db4957f2d07b6182344c5436",
     "semantic_hash": "5d725366db4957f2d07b6182344c5436"
+  },
+  "var/git-hooks/install.js": {
+    "mtime": 1786729141.6458511,
+    "ast_hash": "ec50950cc5baab1c9936aa0c5cab32fb",
+    "semantic_hash": "ec50950cc5baab1c9936aa0c5cab32fb"
+  },
+  "var/git-hooks/pre-commit": {
+    "mtime": 1786729139.6284997,
+    "ast_hash": "afade50b1b49514fb70e8e7bf8e5f5b7",
+    "semantic_hash": "afade50b1b49514fb70e8e7bf8e5f5b7"
   }
 }

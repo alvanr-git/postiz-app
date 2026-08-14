@@ -1,0 +1,13 @@
+#!/bin/sh
+# graphify-pre-commit-start
+# Auto-updates and stages the knowledge graph before each commit.
+
+if command -v graphify >/dev/null 2>&1; then
+    echo "[graphify] Updating codebase knowledge graph..."
+    graphify extract . --code-only
+    graphify cluster-only .
+    git add graphify-out/
+else
+    echo "[graphify] Warning: graphify command not found on PATH. Skipping pre-commit update."
+fi
+# graphify-pre-commit-end
