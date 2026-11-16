@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "path": "~/.gemini/skills-vault/web-frontend-ui",
+      "include_only": [
+        "react-best-practices-suite",
+        "tailwind-design-system"
+      ]
+    },
+    {
+      "path": "~/.gemini/skills-vault/devops-qa-security-backend",
+      "include_only": [
+        "backend-dev-guidelines",
+        "file-uploads",
+        "security-audit-suite",
+        "turborepo-caching"
+      ]
+    },
+    {
+      "path": "~/.gemini/skills-vault/marketing-seo-growth",
+      "include_only": [
+        "social-content"
+      ]
+    }
+  ]
+}
