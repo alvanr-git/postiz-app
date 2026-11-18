@@ -24,10 +24,15 @@ import {
   postId as postIdSearchParam,
 } from '@gitroom/nestjs-libraries/temporal/temporal.search.attribute';
 import { SubscriptionService } from '@gitroom/nestjs-libraries/database/prisma/subscriptions/subscription.service';
-import { withHeartbeat } from '@gitroom/nestjs-libraries/temporal/temporal.heartbeat';
+import {
+  setHeartbeatDetails,
+  withHeartbeat,
+} from '@gitroom/nestjs-libraries/temporal/temporal.heartbeat';
 import {
   BadBody,
   Disconnect,
+  PublishedWithError,
+  RefreshToken,
 } from '@gitroom/nestjs-libraries/integrations/social.abstract';
 
 // Drops fields the workflow and downstream activities never read — biggest wins are `error` (grows per retry) and `childrenPost` (Prisma side-loads it on every recursive row).
@@ -57,6 +62,38 @@ function slimPost(post: any) {
   return rest;
 }
 
+// A genuinely missed occurrence (dead workflow) is only recovered by the
+// missing-posts sweep, which runs every hour - so anything later than the
+// sweep period plus retry margin is a stale anchor, not a missed publish.
+const REANCHOR_GRACE_MS = 2 * 60 * 60 * 1000;
+
+// A repeat post keeps its original anchor publishDate forever (updatePost only
+// flips the state, the calendar expands occurrences virtually). If the workflow
+// gets that raw past date, any (re)start - an accidental edit resetting the
+// state to QUEUE, or a missing-posts sweep poke - sleeps 0 and publishes
+// instantly, machine-gunning the channel. Roll the returned date forward to the
+// next occurrence on the anchor grid instead, so fresh starts wait for the next
+// real occurrence. Only for the initial QUEUE run: repeat chain children
+// (postNow) run against a PUBLISHED post and must keep publishing immediately.
+// Occurrences missed within the grace window still catch up and post.
+function reanchorInterval(post: any) {
+  if (!post?.intervalInDays || post.state !== State.QUEUE) {
+    return post;
+  }
+
+  const interval = post.intervalInDays * 24 * 60 * 60 * 1000;
+  const late = Date.now() - new Date(post.publishDate).getTime();
+  if (late <= REANCHOR_GRACE_MS) {
+    return post;
+  }
+
+  const next =
+    new Date(post.publishDate).getTime() +
+    Math.ceil(late / interval) * interval;
+
+  return { ...post, publishDate: new Date(next) };
+}
+
 @Injectable()
 @Activity()
 export class PostActivity {
@@ -80,9 +117,15 @@ export class PostActivity {
   async searchForMissingThreeHoursPosts() {
     const list = await this._postService.searchForMissingThreeHoursPosts();
     for (const post of list) {
+      // the list can be long, the post may have been published since it was loaded
+      const current = await this._postService.getPostState(post.id);
+      if (current?.state !== 'QUEUE') {
+        continue;
+      }
+
       await this._temporalService.client
         .getRawClient()
-        .workflow.signalWithStart('postWorkflowV107', {
+        .workflow.signalWithStart('postWorkflowV112', {
           workflowId: `post_${post.id}`,
           taskQueue: 'main',
           signal: 'poke',
@@ -131,7 +174,7 @@ export class PostActivity {
       return false;
     }
 
-    return post;
+    return reanchorInterval(post);
   }
 
   @ActivityMethod()
@@ -154,7 +197,10 @@ export class PostActivity {
       return [];
     }
 
-    return getPosts.map(slimPost);
+    // only the root drives the pre-publish sleep and the repeat schedule,
+    // the rest are comments
+    const [root, ...comments] = getPosts.map(slimPost);
+    return [reanchorInterval(root), ...comments];
   }
 
   @ActivityMethod()
@@ -173,10 +219,12 @@ export class PostActivity {
     integration: Integration,
     posts: Post[]
   ) {
-    // the whole body runs under the workflow's heartbeatTimeout (media
-    // conversion and the platform call can both take minutes), so it
-    // heartbeats end to end - under older workflow versions that set no
-    // heartbeatTimeout this is a no-op
+    integration = await this._integrationService.decryptTokens(integration);
+
+    // kept only for in-flight postWorkflowV108 runs, which set a
+    // heartbeatTimeout on this activity - removing the sender would kill
+    // them. Under V109+ (no heartbeatTimeout) this is a no-op and can be
+    // dropped once all V108 executions have drained
     return withHeartbeat(() =>
       this.handleDisconnect(integration, async () => {
         const getIntegration = this._integrationManager.getSocialIntegration(
@@ -232,6 +280,49 @@ export class PostActivity {
     return this.postSocialInternal(integration, posts, true);
   }
 
+  // For the providers with refreshRepeat: a token the platform rejects on the
+  // finalize call means nothing was published, so the token is refreshed and
+  // the call runs once more here, inside the activity. The workflows - frozen
+  // once on main - refresh the token as well, but then go back to
+  // checkPostStatus first, where a provider that arms and confirms its create
+  // finds its own confirmed attempt and stops with a "may have already
+  // published" warning for a post that was never created. When the token
+  // cannot be refreshed the error goes to the workflow like before.
+  private async refreshAndRepeat<T>(
+    integration: Integration,
+    func: (integration: Integration) => Promise<T>
+  ): Promise<T> {
+    const getIntegration = this._integrationManager.getSocialIntegration(
+      integration.providerIdentifier
+    );
+
+    try {
+      return await func(integration);
+    } catch (err) {
+      if (!(err instanceof RefreshToken) || !getIntegration.refreshRepeat) {
+        throw err;
+      }
+
+      setHeartbeatDetails(`${integration.providerIdentifier}: refresh token`);
+      const refresh = await this._refreshIntegrationService
+        .refresh(integration, err.message || '')
+        .catch(() => false as const);
+      if (!refresh || !refresh.accessToken) {
+        throw err;
+      }
+
+      if (getIntegration.refreshWait) {
+        await timer(10000);
+      }
+
+      return func({
+        ...integration,
+        token: refresh.accessToken,
+        refreshToken: refresh.refreshToken || integration.refreshToken,
+      });
+    }
+  }
+
   // A Disconnect error means the platform will keep rejecting this channel no
   // matter how many token refreshes (e.g. TikTok's daily active user cap):
   // mark the channel as needing a re-connect and notify the user, then rethrow
@@ -263,6 +354,28 @@ export class PostActivity {
         );
       }
 
+      // The post is live but a follow-up mutation failed: keep its platform
+      // id / URL on the post, then fail it as BadBody like any other error.
+      if (err instanceof PublishedWithError) {
+        try {
+          await this._postService.updateResolvedRelease(
+            err.postDbId,
+            integration.organizationId,
+            err.releaseId,
+            err.releaseURL
+          );
+        } catch (e) {
+          /**empty**/
+        }
+
+        throw new BadBody(
+          integration.providerIdentifier,
+          JSON.stringify({}),
+          Buffer.from('{}'),
+          err.message
+        );
+      }
+
       throw err;
     }
   }
@@ -272,10 +385,34 @@ export class PostActivity {
     posts: Post[],
     allowPending: boolean
   ) {
-    // the whole body runs under the workflow's heartbeatTimeout (media
-    // conversion and the platform call can both take minutes), so it
-    // heartbeats end to end - under older workflow versions that set no
-    // heartbeatTimeout this is a no-op
+    // The channel still holds the account id of the login step: no page was
+    // selected, so the platform would reject the post. Thrown as BadBody so
+    // every workflow version - frozen once on main - fails the post with this
+    // message without needing a new workflow. A finished channel can hold the
+    // page id in both fields, so a provider that knows its page ids is asked.
+    const getIntegration = this._integrationManager.getSocialIntegration(
+      integration.providerIdentifier
+    );
+    if (
+      getIntegration?.pageRequiredToPost &&
+      !!integration.rootInternalId &&
+      integration.internalId === integration.rootInternalId &&
+      !getIntegration.isPageId?.(integration.internalId)
+    ) {
+      throw new BadBody(
+        integration.providerIdentifier,
+        JSON.stringify({}),
+        Buffer.from('{}'),
+        'The connection of this channel was not finished. Please finish connecting it and select the page or account to post to, then try again.'
+      );
+    }
+
+    integration = await this._integrationService.decryptTokens(integration);
+
+    // kept only for in-flight postWorkflowV108 runs, which set a
+    // heartbeatTimeout on this activity - removing the sender would kill
+    // them. Under V109+ (no heartbeatTimeout) this is a no-op and can be
+    // dropped once all V108 executions have drained
     return withHeartbeat(() =>
       this.handleDisconnect(integration, () =>
         this.postSocialBody(integration, posts, allowPending)
@@ -288,6 +425,11 @@ export class PostActivity {
     posts: Post[],
     allowPending: boolean
   ) {
+    // Stage markers: whatever ran last is what a timed-out activity reports.
+    // Providers that go through this.fetch overwrite these with the exact URL;
+    // the ones on their own HTTP client (x, youtube, bluesky) are still
+    // narrowed down to the step they hung on.
+    setHeartbeatDetails('subscription lookup');
     if (process.env.STRIPE_SECRET_KEY) {
       const subscription = await this._subscriptionService.getSubscription(
         integration.organizationId
@@ -302,11 +444,13 @@ export class PostActivity {
       integration.providerIdentifier
     );
 
+    setHeartbeatDetails('update tags');
     const newPosts = await this._postService.updateTags(
       integration.organizationId,
       posts
     );
 
+    setHeartbeatDetails('resolve media');
     const mappedPosts = await Promise.all(
       (newPosts || []).map(async (p) => ({
         id: p.id,
@@ -316,7 +460,8 @@ export class PostActivity {
           true,
           false,
           !/<\/?[a-z][\s\S]*>/i.test(p.content),
-          getIntegration.mentionFormat
+          getIntegration.mentionFormat,
+          !!getIntegration.inlineImages?.(JSON.parse(p.settings || '{}'))
         ),
         settings: JSON.parse(p.settings || '{}'),
         media: await this._postService.updateMedia(
@@ -327,6 +472,7 @@ export class PostActivity {
       }))
     );
 
+    setHeartbeatDetails(`${integration.providerIdentifier}: publish`);
     const postNow =
       allowPending && getIntegration.postPending
         ? await getIntegration.postPending(
@@ -344,14 +490,16 @@ export class PostActivity {
 
     // The post is already published at this point: the streak is best-effort,
     // failing the activity here would retry it and publish again.
+    setHeartbeatDetails(`${integration.providerIdentifier}: published, streak`);
     try {
       await this._temporalService.client
         .getRawClient()
-        .workflow.start('streakWorkflow', {
+        .workflow.start('streakWorkflowV2', {
           args: [{ organizationId: integration.organizationId }],
           workflowId: `streak_${integration.organizationId}`,
           taskQueue: 'main',
-          workflowIdConflictPolicy: 'TERMINATE_EXISTING',
+          // Keep a running streak, it checks for newer posts before it ends
+          workflowIdConflictPolicy: 'USE_EXISTING',
           typedSearchAttributes: new TypedSearchAttributes([
             {
               key: organizationId,
@@ -368,6 +516,7 @@ export class PostActivity {
 
   @ActivityMethod()
   async checkPostStatus(integration: Integration, pendingData: any) {
+    integration = await this._integrationService.decryptTokens(integration);
     const getIntegration = this._integrationManager.getSocialIntegration(
       integration.providerIdentifier
     );
@@ -379,13 +528,16 @@ export class PostActivity {
 
   @ActivityMethod()
   async finalizePost(integration: Integration, pendingData: any) {
+    integration = await this._integrationService.decryptTokens(integration);
     const getIntegration = this._integrationManager.getSocialIntegration(
       integration.providerIdentifier
     );
 
     return withHeartbeat(() =>
       this.handleDisconnect(integration, () =>
-        getIntegration.finalizePost(integration.token, pendingData, integration)
+        this.refreshAndRepeat(integration, (current) =>
+          getIntegration.finalizePost(current.token, pendingData, current)
+        )
       )
     );
   }
@@ -451,7 +603,10 @@ export class PostActivity {
         return;
       }
 
-      const post = await this._postService.getPostByForWebhookId(postId);
+      const post = await this._postService.getPostByForWebhookId(
+        postId,
+        integrationId
+      );
       await Promise.all(
         webhooks.map(async (webhook) => {
           try {
@@ -504,6 +659,19 @@ export class PostActivity {
   async refreshToken(
     integration: Integration
   ): Promise<false | AuthTokenDetails> {
+    // The workflows call this from their catch block, an error thrown here
+    // would fail the whole run: a token that cannot be read is answered like
+    // a refresh that did not work, without flagging the channel
+    try {
+      integration = await this._integrationService.decryptTokens(integration);
+    } catch (err) {
+      console.error(
+        `Could not read the tokens of integration ${integration?.id}:`,
+        (err as Error)?.message
+      );
+      return false;
+    }
+
     const getIntegration = this._integrationManager.getSocialIntegration(
       integration.providerIdentifier
     );
@@ -522,7 +690,10 @@ export class PostActivity {
 
       return refresh;
     } catch (err) {
-      await this._refreshIntegrationService.setBetweenSteps(integration);
+      await this._refreshIntegrationService.setBetweenSteps(
+        integration,
+        (err as Error)?.message || ''
+      );
       return false;
     }
   }
@@ -532,6 +703,19 @@ export class PostActivity {
     integration: Integration,
     cause: string
   ): Promise<false | AuthTokenDetails> {
+    // The workflows call this from their catch block, an error thrown here
+    // would fail the whole run: a token that cannot be read is answered like
+    // a refresh that did not work, without flagging the channel
+    try {
+      integration = await this._integrationService.decryptTokens(integration);
+    } catch (err) {
+      console.error(
+        `Could not read the tokens of integration ${integration?.id}:`,
+        (err as Error)?.message
+      );
+      return false;
+    }
+
     const getIntegration = this._integrationManager.getSocialIntegration(
       integration.providerIdentifier
     );
@@ -551,7 +735,10 @@ export class PostActivity {
 
       return refresh;
     } catch (err) {
-      await this._refreshIntegrationService.setBetweenSteps(integration, cause);
+      await this._refreshIntegrationService.setBetweenSteps(
+        integration,
+        cause || (err as Error)?.message || ''
+      );
       return false;
     }
   }

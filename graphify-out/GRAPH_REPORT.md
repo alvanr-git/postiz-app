@@ -1,242 +1,302 @@
-# Graph Report - .  (2026-08-15)
+# Graph Report - .  (2026-11-19)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 5582 nodes · 14304 edges · 476 communities (192 shown, 284 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 276 edges (avg confidence: 0.64)
+- 6844 nodes · 15314 edges · 539 communities (280 shown, 259 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 237 edges (avg confidence: 0.61)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `61cd798d`
+- Built from commit: `b97ce50b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- useT
-- makeId
-- IntegrationService
-- useVariables
-- media.component.tsx
-- database.module.ts
+- useModals
 - .fetch
-- IntegrationRepository
-- useFetch
-- get.transation.service.client.ts
+- PostResponse
+- tools
+- IntegrationService
+- OrganizationService
 - f.js
-- NotEnoughScopes
-- StripeService
-- calendar.tsx
-- useSettings
-- GetUserFromRequest
-- OrganizationRepository
-- timer
+- useVariables
 - high.order.provider.tsx
-- MediaController
-- Post
-- useIntegration
-- GetOrgFromRequest
-- EmailService
-- dependencies
+- PostsService
+- AgentToolInterface
+- calendar.tsx
+- MediaService
+- manage.modal.tsx
+- media.service.ts
+- useT
+- store.ts
+- AuthService
+- useFetch
+- PostDetails
+- SubscriptionService
+- api.module.ts
+- start.mcp.ts
+- PublicIntegrationsController
+- InstagramProvider
+- UsersService
+- StripeService
+- ThirdPartyManager
+- command.module.ts
+- useLaunchStore
+- deleteDialog
+- IUploadProvider
 - AnalyticsData
-- short.link.service.ts
-- all.providers.settings.ts
+- IntegrationRepository
+- media.component.tsx
+- editor.tsx
+- setHeartbeatDetails
+- database.module.ts
+- VideoManager
+- IsSafeWebhookUrl
+- dependencies
+- PostsController
+- postWorkflowV105
 - devDependencies
-- SetsRepository
-- SignatureDto
 - AutopostService
-- OAuthService
+- PrismaRepository
+- billing.controller.ts
+- onboarding.modal.tsx
+- SetsDto
+- SignatureDto
+- Post
+- show.all.providers.tsx
+- XProvider
+- CreateAgencyDto
+- BillingController
 - linkedin.page.provider.ts
-- create.post.dto.ts
-- images.slides.ts
+- ShortLinking
 - AnnouncementDto
-- .connectSocialMedia
+- NotificationService
+- is.general.server.side.ts
+- layout.component.tsx
+- LinkedinProvider
+- MediaController
+- internal.channels.tsx
+- list.tsx
+- compilerOptions
 - app.module.ts
 - compilerOptions
-- AdminStatsRepository
-- compilerOptions
-- with-continue-provider.tsx
-- SubscriptionRepository
+- SocialAbstract
+- main.billing.component.tsx
+- ClippingActivity
 - targets
-- page.tsx
+- getSsrfSafeDispatcher
+- GetUserFromRequest
+- IntegrationsController
+- useUser
+- OAuthRepository
+- TrackService
 - TumblrProvider
-- PostActivity
 - scripts
-- OAuthAppController
 - compilerOptions
 - compilerOptions
 - compilerOptions
-- LinkedinPageProvider
-- MastodonProvider
-- posts.list.minify.ts
-- main.ts
-- AuthProviderAbstract
-- ai.video.tsx
-- ThreadsProvider
-- compilerOptions
-- ThirdPartyController
-- PostsRepository
-- auth.middleware.ts
-- UsersRepository
-- LinkedinProvider
-- AuthService
-- agent.chat.tsx
-- NotificationsRepository
-- oauth-middleware.ts
-- WebhooksDto
-- MastraService
-- InstagramProvider
-- AutopostController
-- ConfigurationChecker
-- internal.channels.tsx
-- heygen.provider.tsx
-- package.json
-- HeygenProvider
-- agent.graph.service.ts
 - AgentGraphService
-- AgenciesRepository
-- MediaDto
-- PublicController
-- devto.provider.tsx
-- .searchForMissingThreeHoursPosts
+- PaymentProviderAbstract
+- permission.exception.class.ts
+- AdminStatsRepository
+- OAuthController
+- comments.components.tsx
+- TiktokBusinessProvider
+- compilerOptions
+- .getSocialIntegration
+- GetOrgFromRequest
+- .token
+- ThreadsProvider
+- OAuthService
+- register.tsx
+- reddit.provider.tsx
+- PostActivity
+- overrides
+- oauth.controller.ts
+- email.service.ts
+- EncryptionService
 - YoutubeSettingsDto
-- YoutubeProvider
+- .createPost
+- package.json
+- RedditProvider
+- images.slides.ts
+- encryption.service.ts
+- all.providers.settings.ts
+- NewsletterInterface
 - nest-cli.json
+- CreateOAuthAppDto
+- ClippingService
 - nest-cli.json
 - manifest.json
 - nest-cli.json
+- EmailActivity
+- CreatePostDto
+- GmbProvider
 - paths
-- AutopostDto
+- CopilotController
+- AuthProviderAbstract
 - package.json
 - admin-stats.component.tsx
-- preview.provider.component.tsx
-- facebook.provider.tsx
-- ThirdPartyRepository
+- AuthService
 - DevToSettingsDto
-- RedditSettingsDto
-- RedditProvider
-- package.json
-- AuthController
-- command.module.ts
-- compilerOptions
-- media.dto.ts
-- webhook.url.validator.ts
-- NewsletterInterface
-- local.storage.ts
-- CopilotController
-- background.ts
-- deny
-- OpenaiService
-- CreateAgencyDto
-- InstagramDto
 - r2.uploader.ts
+- package.json
+- preview.provider.component.tsx
 - compilerOptions
-- tsconfig.lib.json
-- CreateOrgUserDto
-- LemmySettingsDto
-- MediumSettingsDto
+- posts.list.minify.ts
+- ErrorsRepository
+- ClippingController
+- background.ts
+- MediaActivity
+- postWorkflowV110
+- Postiz
+- deny
 - DiscordProvider
 - TelegramProvider
 - compilerOptions
 - tsconfig.lib.json
+- ClippingWidgetController
+- Get
+- PermissionsService
+- stars.and.forks.tsx
+- announcement.banner.tsx
+- IntegrationsActivity
+- postWorkflowV112
+- .exchangeCodeForToken
+- MediaDto
+- HashnodeSettingsDto
+- LemmySettingsDtoInner
+- MediumSettingsDto
+- FarcasterProvider
+- compilerOptions
+- tsconfig.lib.json
 - package.json
-- oauth.controller.ts
-- AgentGraphInsertService
+- ClippingDto
+- EnterpriseController
+- MediaWidgetController
 - messages.ts
-- sentry.component.tsx
+- initialize.sentry.client.ts
+- image-text-slides.provider.tsx
 - package.json
+- postWorkflowV108
+- postWorkflowV107
+- postWorkflowV109
 - CreateGeneratedPostsDto
-- ShortLinkService
+- XDto
+- NostrProvider
+- IAuthenticator
 - compilerOptions
 - package.json
 - compilerOptions
-- page.tsx
-- getCookieUrlFromDomain
-- .createPost
-- LinkedinDto
-- LoginUserDto
-- AdminApplyCouponDto
-- getT
-- autoprefixer
+- postWorkflowV111
+- oauth.service.ts
+- GetPostsListDto
+- AutopostDto
+- CreatePublicCommentDto
+- HashnodeProvider
+- SeedanceParams
+- get.translation.service.backend.ts
+- postWorkflowV106
+- video.activity.ts
+- app.module.ts
 - compilerOptions
-- overrides
-- agent.graph.insert.service.ts
+- media.dto.ts
+- custom.upload.validation.ts
+- ClippingRepository
+- PinterestSettingsDto
 - WordpressDto
 - MoltbookProvider
-- IAuthenticator
-- ApprovedAppsController
-- ForgotReturnPasswordDto
+- TwitchProvider
 - vite.config.base.ts
+- attribution.component.tsx
 - page.tsx
-- IntegrationTimeDto
-- PinterestSettingsDto
-- IsSafeWebhookUrl
-- infinite.workflow.register.ts
-- AnalyticsController
+- forgot-return.tsx
+- post.content.client.tsx
+- send.email.workflow.ts
+- AdminApplyCouponDto
+- KickProvider
+- short.link.service.ts
+- GoogleProvider
 - package.json
 - provider.registry.ts
-- postWorkflowV106
+- connect.link.tsx
+- forgot.tsx
+- moltbook.provider.tsx
+- twitch.provider.tsx
+- IntegrationTimeDto
+- FacebookDto
 - MeweDto
-- TumblrDto
-- MonitorController
-- google.provider.ts
-- is.general.server.side.ts
-- isGeneralServerSide
-- DribbbleDto
-- FarcasterDto
-- GmbSettingsDto
 - AddTeamMemberDto
-- KickProvider
-- Veo3Params
-- ForgotPasswordDto
-- ResendActivationDto
+- ImportMediaDto
+- MonitorController
+- posts.validation.exception.ts
+- removeAuth
 - testimonial.component.tsx
+- plugs.context.ts
+- LoginUserDto
+- PlugDto
+- farcaster.dto.ts
+- WhopDto
+- MockRedis
+- authorize.component.tsx
 - HealthController
 - .eslintrc.json
 - StarsListDto
+- GeneratorDto
+- SaveMediaInformationDto
+- UploadDto
 - GetNotificationsDto
-- FacebookDto
-- SkoolDto
+- ListmonkDto
+- AdminAddTeamMemberDto
 - .eslintrc.json
 - RootController
-- .deleteWebhook
-- OauthProvider
-- RefreshTokens
 - matches
-- sanitize.post.content.ts
+- page.tsx
 - page.tsx
 - in-bridge.tsx
-- agent.input.tsx
-- mention.component.tsx
+- creation.method.badge.tsx
+- dnd.provider.tsx
+- digest.email.workflow.ts
 - eslint.config.mjs
-- agent.module.ts
-- ValidIn
+- ValidContent
+- ResendActivationDto
+- ConnectIntegrationDto
+- ConnectLinkDto
+- ExtractContentService
 - server.js
-- .getStatistics
 - fetch-gtm.mjs
 - route.ts
-- layout.standalone.tsx
-- MockRedis
+- use.move.to.integration.tsx
+- hasExtension
+- DeletePostTool
+- ApiKeyDto
+- CustomerNameDto
+- IntegrationFunctionDto
+- IntegrationNameDto
 - exclude
 - install.js
-- AuthProviderManager
-- page.tsx
-- page.tsx
-- page.tsx
+- layout.tsx
 - layout.tsx
 - page.tsx
-- page.tsx
-- page.tsx
-- page.tsx
-- page.tsx
-- page.tsx
-- page.tsx
 - chrome.d.ts
+- agent.textarea.tsx
 - use.expend.tsx
 - use.hide.top.editor.tsx
-- metric.component.tsx
-- PostPlug
+- html.component.tsx
+- mode.component.tsx
+- change.dir.client.tsx
+- render.preview.date.client.tsx
+- proxy.ts
+- babel-jest
+- send.email.signal.ts
+- @copilotkit/react-ui
+- ChangePostStatusDto
+- CreateTagDto
+- EmailNotificationsDto
+- VideoFunctionDto
+- ImagesSlidesParams
 - @nestjs/common
 - lib
 - tsconfig.json
@@ -245,16 +305,14 @@
 - eslint.config.mjs
 - next.config.js
 - postcss.config.mjs
-- Empty
 - tailwind.config.cjs
-- array-move
-- async-mutex
 - @atproto/api
+- @aws-sdk/client-kms
 - @aws-sdk/client-s3
+- @aws-sdk/client-sesv2
+- @aws-sdk/lib-storage
 - @aws-sdk/s3-request-presigner
 - axios
-- babel-jest
-- bottleneck
 - bs58
 - bufferutil
 - canvas
@@ -265,37 +323,30 @@
 - class-validator-jsonschema
 - clsx
 - compression
-- concat-stream
 - cookie-parser
 - @copilotkit/react-textarea
 - @copilotkit/runtime
-- copy-to-clipboard
+- @copilotkit/runtime-client-gql
 - @crxjs/vite-plugin
-- crypto-hash
-- dayjs
 - dotenv
+- dotenv-cli
+- @dub/analytics
 - emoji-picker-react
 - eslint
-- eslint-config-prettier
-- eslint-plugin-import
-- eslint-plugin-jsx-a11y
-- eslint-plugin-react
-- eslint-plugin-react-hooks
-- evp_bytestokey
-- facebook-nodejs-business-sdk
-- fast-xml-parser
-- file-type
+- eslint-config-next
 - google-auth-library
 - googleapis
 - @hookform/resolvers
+- hot-reload-extension-vite
 - i18n-iso-countries
 - i18next
+- i18next-browser-languagedetector
 - i18next-resources-to-backend
+- image-to-pdf
 - ioredis
 - isomorphic-dompurify
+- jest
 - jest-environment-node
-- jest-junit
-- jest-mock-extended
 - jsdom
 - json-to-graphql-query
 - jsonwebtoken
@@ -305,16 +356,18 @@
 - @langchain/openai
 - @langchain/tavily
 - all.two.level.subdomain.ts
-- add.comment.dto.ts
+- kick.dto.ts
+- hashnode.tags.ts
 - stripe.country.list.ts
+- user.agent.ts
 - lodash
 - @mantine/core
+- @mantine/dates
 - @mantine/hooks
-- @mantine/modals
-- mastra
+- @mastra/client-js
 - @mastra/core
 - @mastra/mcp
-- @mastra/memory
+- @mastra/pg
 - @meronex/icons
 - mime
 - mime-types
@@ -323,31 +376,26 @@
 - music-metadata
 - @nest-lab/throttler-storage-redis
 - @nestjs/cli
+- @nestjs/core
 - @nestjs/microservices
 - @nestjs/platform-express
 - nestjs-real-ip
-- @nestjs/schedule
-- @nestjs/schematics
 - @nestjs/swagger
 - nestjs-temporal-core
-- @nestjs/testing
 - @nestjs/throttler
 - next
+- next-plausible
 - @neynar/nodejs-sdk
-- @neynar/react
 - node-fetch
-- node-telegram-bot-api
 - nodemailer
-- nodemon
 - nostr-tools
 - openai
 - p-limit
 - parse5
-- @pigment-css/react
 - polotno
-- posthog-js
 - @postiz/wallets
 - @prisma/client
+- qrcode
 - react
 - react-colorful
 - react-country-flag
@@ -357,16 +405,14 @@
 - react-dropzone
 - react-hook-form
 - react-hotkeys-hook
-- react-i18next
-- react-loading
 - react-sortablejs
 - react-tag-autocomplete
 - react-tooltip
 - react-use-cookie
 - react-use-keypress
-- redis
 - reflect-metadata
 - remove-markdown
+- resend
 - rxjs
 - sass
 - @sentry/nestjs
@@ -375,21 +421,13 @@
 - @sentry/react
 - sha256
 - sharp
-- simple-statistics
-- slugify
-- @solana/wallet-adapter-react
 - @solana/wallet-adapter-react-ui
-- stripe
+- @stripe/react-stripe-js
 - @stripe/stripe-js
-- striptags
 - subtitle
 - @swc/helpers
-- sweetalert2
-- @sweetalert2/theme-dark
 - swr
 - tailwind-scrollbar
-- tailwindcss
-- @tailwindcss/postcss
 - tailwindcss-rtl
 - @temporalio/activity
 - @temporalio/client
@@ -397,26 +435,21 @@
 - @temporalio/worker
 - @temporalio/workflow
 - timezones-list
-- tippy.js
 - @tiptap/extension-document
 - @tiptap/extension-history
 - @tiptap/extension-paragraph
 - @tiptap/extension-underline
 - @tiptap/pm
 - @tiptap/react
-- @tiptap/starter-kit
 - @tiptap/suggestion
-- tldts
 - transloadit
 - tslib
 - tweetnacl
 - twitter-api-v2
 - twitter-text
 - @types/bcrypt
-- @types/concat-stream
-- @types/facebook-nodejs-business-sdk
+- @types/jsonwebtoken
 - @types/lodash
-- @types/md5
 - @types/mime
 - @types/mime-types
 - @types/multer
@@ -428,10 +461,10 @@
 - @types/striptags
 - @types/yup
 - @uidotdev/usehooks
-- @uiw/react-md-editor
 - @uppy/aws-s3
 - @uppy/compressor
 - @uppy/core
+- @uppy/dashboard
 - @uppy/drag-drop
 - @uppy/file-input
 - @uppy/progress-bar
@@ -443,640 +476,840 @@
 - utf-8-validate
 - uuid
 - viem
-- webextension-polyfill
 - ws
 - yargs
 - yup
-- zod
 - zustand
-- @pmmmwh/react-refresh-webpack-plugin
+- @gitroom/frontend/*
 - prettier
+- prisma
 - @swc/cli
-- @swc/core
-- @swc-node/register
-- ts-jest
-- tsup
-- @types/chrome
+- @testing-library/react
 - @types/compression
-- @types/cookie-parser
-- @types/node
-- @types/react
+- @types/express
+- @types/jest
+- @types/qrcode
 - @types/react-dom
 - @types/uuid
-- @types/webextension-polyfill
 - @types/yargs
-- @typescript-eslint/parser
+- typescript
 - vite-tsconfig-paths
-- @vitejs/plugin-react
-- vitest
-- @vitest/coverage-v8
 - @vitest/ui
-- @gitroom/frontend/*
 - create-namespace-default.sh
 - docker-build.sh
 - docker-create.sh
 - pre-commit
+- UsePipes
+- UsePipes
+- Catch
+- IsDefined
+- MinLength
+- Plug
+- Plug
+- Plug
+- Plug
+- Injectable
+- Injectable
+- ArrayMaxSize
+- IsArray
+- IsString
+- Type
+- ValidateNested
 
 ## God Nodes (most connected - your core abstractions)
-1. `useT()` - 334 edges
-2. `useFetch()` - 232 edges
-3. `GetOrgFromRequest` - 160 edges
-4. `makeId()` - 143 edges
-5. `PostDetails` - 130 edges
-6. `useModals()` - 122 edges
-7. `PostResponse` - 119 edges
-8. `useSettings()` - 105 edges
-9. `Post` - 105 edges
-10. `useToaster()` - 103 edges
+1. `PostDetails` - 137 edges
+2. `useModals()` - 134 edges
+3. `PostResponse` - 128 edges
+4. `useT()` - 124 edges
+5. `Post` - 122 edges
+6. `IntegrationService` - 100 edges
+7. `PostsService` - 99 edges
+8. `SocialProvider` - 90 edges
+9. `SocialAbstract` - 88 edges
+10. `AuthTokenDetails` - 87 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `isBlockedIPv4()` --indirect_call--> `n()`  [INFERRED]
-  libraries/nestjs-libraries/src/dtos/webhooks/webhook.url.validator.ts → apps/frontend/public/f.js
 - `useTrack()` --indirect_call--> `e()`  [INFERRED]
   libraries/react-shared-libraries/src/helpers/use.track.tsx → apps/frontend/public/f.js
-- `OAuthAuthorizePage()` --calls--> `useFetch()`  [EXTRACTED]
-  apps/frontend/src/app/(app)/oauth/authorize/page.tsx → libraries/helpers/src/utils/custom.fetch.tsx
-- `LoadMessages()` --calls--> `useFetch()`  [EXTRACTED]
-  apps/frontend/src/components/agents/agent.chat.tsx → libraries/helpers/src/utils/custom.fetch.tsx
 - `Activate()` --indirect_call--> `timer()`  [INFERRED]
   apps/frontend/src/components/auth/activate.tsx → libraries/helpers/src/utils/timer.ts
+- `ChatbaseComponentLoad()` --calls--> `useFetch()`  [EXTRACTED]
+  apps/frontend/src/components/layout/chatbase.component.tsx → libraries/helpers/src/utils/custom.fetch.tsx
+- `ContinueProvider()` --calls--> `useFetch()`  [EXTRACTED]
+  apps/frontend/src/components/layout/continue.provider.tsx → libraries/helpers/src/utils/custom.fetch.tsx
+- `SaveSetModal()` --calls--> `useT()`  [EXTRACTED]
+  apps/frontend/src/components/sets/sets.tsx → libraries/react-shared-libraries/src/translation/get.transation.service.client.ts
 
 ## Import Cycles
-- 4-file cycle: `apps/frontend/src/components/launches/ai.video.tsx -> apps/frontend/src/components/videos/video.render.component.tsx -> apps/frontend/src/components/videos/providers/veo3.provider.tsx -> apps/frontend/src/components/media/media.component.tsx -> apps/frontend/src/components/launches/ai.video.tsx`
+- 4-file cycle: `apps/frontend/src/components/launches/ai.video.tsx -> apps/frontend/src/components/videos/video.render.component.tsx -> apps/frontend/src/components/videos/providers/seedance.provider.tsx -> apps/frontend/src/components/media/media.component.tsx -> apps/frontend/src/components/launches/ai.video.tsx`
 - 5-file cycle: `libraries/nestjs-libraries/src/database/prisma/autopost/autopost.service.ts -> libraries/nestjs-libraries/src/database/prisma/posts/posts.service.ts -> libraries/nestjs-libraries/src/database/prisma/media/media.service.ts -> libraries/nestjs-libraries/src/database/prisma/subscriptions/subscription.service.ts -> libraries/nestjs-libraries/src/database/prisma/organizations/organization.service.ts -> libraries/nestjs-libraries/src/database/prisma/autopost/autopost.service.ts`
 
-## Communities (476 total, 284 thin omitted)
+## Communities (539 total, 259 thin omitted)
 
-### Community 0 - "useT"
+### Community 0 - "useModals"
 Cohesion: 0.03
-Nodes (134): ApprovedAppsComponent(), useApprovedApps(), Autopost(), AppliedCouponDisplay(), CouponInput(), FormWrapper(), PriceBreakdown(), StripeInputs() (+126 more)
+Nodes (78): FarcasterApproval(), AddOrEditWebhook(), Autopost(), details, getOptions(), getOptionsChoose(), AddProviderButton(), AddProviderComponent() (+70 more)
 
-### Community 1 - "makeId"
-Cohesion: 0.05
-Nodes (45): NewInput(), Plug(), hasExtension(), readOrFetch(), removeMarkdown(), Rules(), BadBody, RefreshToken (+37 more)
-
-### Community 2 - "IntegrationService"
+### Community 1 - ".fetch"
 Cohesion: 0.03
-Nodes (72): PostValidationError, PostValidationException, { fromBuffer }, AgentToolInterface, ToolReturn, getAuth(), checkAuth(), GenerateImageTool (+64 more)
+Nodes (17): Plug(), DevToProvider, Tool, LinkedinPageProvider, Rules, MediumProvider, Tool, MeweProvider (+9 more)
 
-### Community 3 - "useVariables"
-Cohesion: 0.03
-Nodes (94): useReturnUrl(), jakartaSans, OAuthAuthorizePage(), jakartaSans, GlobalError(), jakartaSans, AdminWhitelistComponent(), Login() (+86 more)
-
-### Community 4 - "media.component.tsx"
-Cohesion: 0.03
-Nodes (100): Integrations, LinkedinCompany(), LinkedinCompanyPop(), postUrlEmitter, ShowLinkedinCompany(), CreateThumbnail(), MediaComponentInner(), MediaSettingsLayout() (+92 more)
-
-### Community 5 - "database.module.ts"
-Cohesion: 0.03
-Nodes (56): authenticatedController, ChannelsContext, authenticatedController, AuthorizationActions, Sections, SubscriptionException, AbilityPolicy, CheckPolicies() (+48 more)
-
-### Community 6 - ".fetch"
-Cohesion: 0.03
-Nodes (24): TikTokDto, IsBoolean, IsIn, IsOptional, IsString, JSONSchema, MaxLength, ValidateIf (+16 more)
-
-### Community 7 - "IntegrationRepository"
-Cohesion: 0.03
-Nodes (21): IntegrationsController, ApiTags, Body, Controller, Get, Param, Put, Query (+13 more)
-
-### Community 8 - "useFetch"
-Cohesion: 0.04
-Nodes (63): AdminErrorsComponent(), ErrorDetailsModal(), ErrorRow, ErrorsResponse, safeParse(), useErrorsList(), usePlatformsList(), AnalyticsComponent() (+55 more)
-
-### Community 9 - "get.transation.service.client.ts"
-Cohesion: 0.06
-Nodes (42): WhitelistedEmail, ResendInputs, ResendStatus, Inputs, Inputs, Inputs, NeynarAuthButton(), ButtonCaster() (+34 more)
-
-### Community 10 - "f.js"
-Cohesion: 0.12
-Nodes (73): a(), aa(), ab(), b(), ba(), Bb(), bc(), c() (+65 more)
-
-### Community 11 - "NotEnoughScopes"
-Cohesion: 0.40
-Nodes (3): NotEnoughScopesFilter, Catch, NotEnoughScopes
-
-### Community 12 - "StripeService"
-Cohesion: 0.06
-Nodes (15): BillingController, ApiTags, Body, Controller, Get, Param, Req, StripeController (+7 more)
-
-### Community 13 - "calendar.tsx"
-Cohesion: 0.06
-Nodes (46): Calendar(), CalendarColumn, CalendarItem, CalendarContext, CalendarWeekProvider(), getDateRange(), ListStateFilter, useCalendar() (+38 more)
-
-### Community 14 - "useSettings"
+### Community 2 - "PostResponse"
 Cohesion: 0.10
-Nodes (41): useCustomProviderFunction(), finalInformation, getValues(), useSettings(), useValues(), DiscordChannelSelect(), DiscordComponent(), DribbbleSettings() (+33 more)
+Nodes (42): getSsrfSafeAxios(), ssrfSafeAxios, DashboardFunction(), BadBody, Disconnect, PublishedWithError, rangeReadFailure(), RefreshToken (+34 more)
 
-### Community 15 - "GetUserFromRequest"
-Cohesion: 0.07
-Nodes (26): AdminController, ApiTags, Body, Controller, Delete, Get, Param, Query (+18 more)
+### Community 3 - "tools"
+Cohesion: 0.05
+Nodes (94): destructiveHint, openWorldHint, readOnlyHint, app_info, category, description, display_name, subtitle (+86 more)
 
-### Community 16 - "OrganizationRepository"
+### Community 4 - "IntegrationService"
+Cohesion: 0.05
+Nodes (28): NoAuthIntegrationsController, ApiTags, Body, CheckPolicies, Controller, Get, Param, Throttle (+20 more)
+
+### Community 5 - "OrganizationService"
+Cohesion: 0.03
+Nodes (38): ApiModule, Module, authenticatedController, AuthMiddleware, Injectable, PublicAuthMiddleware, Injectable, SuperAdminGuard (+30 more)
+
+### Community 6 - "f.js"
+Cohesion: 0.10
+Nodes (83): a(), aa(), ab(), b(), ba(), Bb(), bc(), c() (+75 more)
+
+### Community 7 - "useVariables"
 Cohesion: 0.04
-Nodes (16): SettingsController, ApiTags, Body, Controller, Delete, Get, Param, IsEnum (+8 more)
+Nodes (50): ReturnUrlComponent(), sameOriginUrl(), useReturnUrl(), LoginWithOidc(), OauthProvider(), FAQComponent(), FAQSection(), useFaqList() (+42 more)
 
-### Community 17 - "timer"
+### Community 8 - "high.order.provider.tsx"
+Cohesion: 0.04
+Nodes (57): DiscordComponent(), DribbbleSettings(), callToActionTypes, GmbSettings(), topicTypes, CharacterCondition, Empty, IsOptional (+49 more)
+
+### Community 9 - "PostsService"
+Cohesion: 0.04
+Nodes (8): toMedia(), parseSettings(), PostsRepository, Injectable, PostsService, Injectable, IntegrationSettingsTransformer, Injectable
+
+### Community 10 - "AgentToolInterface"
 Cohesion: 0.05
-Nodes (11): timer(), safeStringify(), truncateForTemporal(), BlueskyProvider, getVideoJobStatus(), reduceImageBySize(), Plug, uploadVideo() (+3 more)
+Nodes (46): AgentToolInterface, ToolReturn, ClippingStatusTool, Injectable, ClippingTool, Injectable, ClippingWidgetTicketTool, Injectable (+38 more)
 
-### Community 18 - "high.order.provider.tsx"
+### Community 11 - "calendar.tsx"
+Cohesion: 0.05
+Nodes (54): StarsTableComponent(), AppliedCouponDisplay(), PriceBreakdown(), SubmitBar(), CalendarColumn, CalendarItem, CalendarContext, CalendarWeekProvider() (+46 more)
+
+### Community 12 - "MediaService"
+Cohesion: 0.04
+Nodes (10): Injectable, UploadWidgetAuthMiddleware, GenerateVideoTool, Injectable, MediaRepository, Injectable, MediaService, Injectable (+2 more)
+
+### Community 13 - "manage.modal.tsx"
+Cohesion: 0.05
+Nodes (51): ListStateFilter, DatePicker(), DatePickerPanel(), getList(), RepeatComponent(), SelectChannels(), SelectCustomer(), Check() (+43 more)
+
+### Community 14 - "media.service.ts"
+Cohesion: 0.05
+Nodes (37): category, hook, model, toolNode, topic, WorkflowChannelsState, dallePrompt, generateContent (+29 more)
+
+### Community 15 - "useT"
 Cohesion: 0.11
-Nodes (20): IntegrationContext, InternalChannels(), ThreadFinisher(), callToActionTypes, GmbSettings(), topicTypes, CharacterCondition, Empty (+12 more)
+Nodes (41): useCustomProviderFunction(), Empty, finalInformation, getValues(), IsOptional, useSettings(), useValues(), Plug() (+33 more)
 
-### Community 19 - "MediaController"
+### Community 16 - "store.ts"
 Cohesion: 0.06
-Nodes (23): MediaController, ApiTags, Body, Controller, Delete, Get, Param, Query (+15 more)
+Nodes (42): metadata, metadata, Agent(), AgentList(), AgentChat(), Hooks(), OpenModal(), Input() (+34 more)
 
-### Community 20 - "Post"
-Cohesion: 0.09
-Nodes (15): PostsController, ApiTags, Body, Controller, Delete, Get, Param, Put (+7 more)
+### Community 17 - "AuthService"
+Cohesion: 0.06
+Nodes (25): AuthController, ApiTags, Body, Controller, Get, Param, Query, RealIP (+17 more)
 
-### Community 21 - "useIntegration"
-Cohesion: 0.15
-Nodes (25): GeneralPreviewComponent(), useFormatting(), useIntegration(), FacebookPreview(), graduationStrategies, InstagramCollaborators(), postType, InstagramPreview() (+17 more)
-
-### Community 22 - "GetOrgFromRequest"
-Cohesion: 0.11
-Nodes (17): Delete, PUBLIC_API_ALLOWED_MIME, PublicIntegrationsController, ApiTags, Body, Controller, Delete, Get (+9 more)
-
-### Community 23 - "EmailService"
-Cohesion: 0.08
-Nodes (21): EmailActivity, Activity, ActivityMethod, Injectable, Email, emailSignal, SendEmail, sendEmailSignal (+13 more)
-
-### Community 24 - "dependencies"
-Cohesion: 0.05
-Nodes (43): @ai-sdk/openai, @copilotkit/react-ui, dotenv-cli, @dub/analytics, hot-reload-extension-vite, i18next-browser-languagedetector, image-to-pdf, @mantine/dates (+35 more)
-
-### Community 25 - "AnalyticsData"
-Cohesion: 0.05
-Nodes (6): DribbbleProvider, FacebookProvider, clientAndGmb(), GmbProvider, PinterestProvider, AnalyticsData
-
-### Community 26 - "short.link.service.ts"
-Cohesion: 0.08
-Nodes (10): Dub, getOptions(), Empty, getOptions(), Kutt, getOptions(), LinkDrip, options (+2 more)
-
-### Community 27 - "all.providers.settings.ts"
+### Community 18 - "useFetch"
 Cohesion: 0.07
-Nodes (33): allProviders(), EmptySettings, None, ProviderExtension, IsIn, DiscordDto, IsDefined, IsString (+25 more)
+Nodes (41): AdminErrorsComponent(), ErrorDetailsModal(), ErrorRow, ErrorsResponse, safeParse(), useErrorsList(), usePlatformsList(), AdminWhitelistComponent() (+33 more)
 
-### Community 28 - "devDependencies"
+### Community 19 - "PostDetails"
+Cohesion: 0.06
+Nodes (21): TikTokDto, TikTokLocation, TikTokMusic, IsBoolean, IsDefined, IsIn, IsNumber, IsOptional (+13 more)
+
+### Community 20 - "SubscriptionService"
 Cohesion: 0.05
-Nodes (37): cross-env, eslint-config-next, fs-extra, jest, jest-environment-jsdom, devDependencies, cross-env, eslint-config-next (+29 more)
+Nodes (5): SubscriptionRepository, Injectable, SubscriptionService, Injectable, RevenueCatProvider
 
-### Community 29 - "SetsRepository"
+### Community 21 - "api.module.ts"
+Cohesion: 0.09
+Nodes (14): authenticatedController, client, FarcasterProvider, AuthProvider, GithubProvider, AuthProvider, OauthProvider, AuthProvider (+6 more)
+
+### Community 22 - "start.mcp.ts"
+Cohesion: 0.05
+Nodes (32): checkConfiguration(), RFC-8414, als, Ctx, getRelay(), runWithContext(), ChatModule, Global (+24 more)
+
+### Community 23 - "PublicIntegrationsController"
+Cohesion: 0.10
+Nodes (15): PublicIntegrationsController, ApiTags, Body, CheckPolicies, Controller, Delete, Get, GetOrgFromRequest (+7 more)
+
+### Community 24 - "InstagramProvider"
+Cohesion: 0.05
+Nodes (20): Collaborators, InstagramAudio, InstagramDto, IsArray, IsBoolean, IsDefined, IsIn, IsNumber (+12 more)
+
+### Community 25 - "UsersService"
+Cohesion: 0.06
+Nodes (9): IsTimeZone, AdminStatsService, Injectable, Injectable, UsersRepository, Injectable, UsersService, TimezoneDto (+1 more)
+
+### Community 27 - "ThirdPartyManager"
+Cohesion: 0.07
+Nodes (18): ThirdPartyController, ApiTags, Body, Controller, Delete, Get, Param, HeygenProvider (+10 more)
+
+### Community 28 - "command.module.ts"
+Cohesion: 0.05
+Nodes (22): CommandModule, Module, bootstrap(), AgentRun, Command, Injectable, ConfigurationTask, Command (+14 more)
+
+### Community 29 - "useLaunchStore"
+Cohesion: 0.09
+Nodes (31): start(), AiVideo(), Modal(), GeneralPreviewComponent(), LinkedinCompanyPop(), InformationComponent(), FacebookPreview(), InstagramPreview() (+23 more)
+
+### Community 30 - "deleteDialog"
+Cohesion: 0.09
+Nodes (29): CommentComponent(), Comments, EditableCommentComponent(), LinkedinCompany(), postUrlEmitter, PickPlatforms(), TopTitle(), MergePost() (+21 more)
+
+### Community 31 - "IUploadProvider"
+Cohesion: 0.06
+Nodes (19): ssrfSafeDispatcher, ssrfSafeLookup(), blockedIps, blockedIPv4Ranges, isBlockedIp(), isBlockedIPv4(), isBlockedIPv6(), isSafePublicHttpsUrl() (+11 more)
+
+### Community 32 - "AnalyticsData"
+Cohesion: 0.05
+Nodes (8): DribbbleProvider, Tool, FacebookProvider, Rules, PinterestProvider, Rules, Tool, AnalyticsData
+
+### Community 34 - "media.component.tsx"
+Cohesion: 0.06
+Nodes (30): DeveloperComponent(), useOAuthApp(), DeveloperIconComponent(), AiImage(), AiImageModal(), list, CreateThumbnail(), MediaComponentInner() (+22 more)
+
+### Community 35 - "editor.tsx"
+Cohesion: 0.06
+Nodes (31): CompressionWrapper, useUppyUploader(), AComponent(), AddPostButton(), BoldText(), originalMap, reverseMap, Bullets() (+23 more)
+
+### Community 36 - "setHeartbeatDetails"
+Cohesion: 0.08
+Nodes (9): BlueskyProvider, getVideoJobStatus(), startVideoUpload(), Rules, uploadVideo(), clientAndYoutube(), Rules, YoutubeProvider (+1 more)
+
+### Community 37 - "database.module.ts"
+Cohesion: 0.06
+Nodes (21): PaymentController, ApiTags, Controller, Param, Req, StripeController, ApiTags, Controller (+13 more)
+
+### Community 38 - "VideoManager"
+Cohesion: 0.08
+Nodes (20): getAuth(), checkAuth(), GenerateVideoOptionsTool, Injectable, GroupListTool, Injectable, Injectable, VideoFunctionTool (+12 more)
+
+### Community 39 - "IsSafeWebhookUrl"
+Cohesion: 0.09
+Nodes (22): ApiTags, Body, Controller, Delete, Get, Param, Put, Query (+14 more)
+
+### Community 40 - "dependencies"
+Cohesion: 0.06
+Nodes (40): @ai-sdk/openai, copy-to-clipboard, dayjs, evp_bytestokey, file-type, @mastra/memory, node-telegram-bot-api, dependencies (+32 more)
+
+### Community 41 - "PostsController"
+Cohesion: 0.14
+Nodes (14): PostsController, ApiTags, Body, CheckPolicies, Controller, Delete, Get, GetOrgFromRequest (+6 more)
+
+### Community 42 - "postWorkflowV105"
+Cohesion: 0.10
+Nodes (28): {
+  getPostsList,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV101(), proxyTaskQueue(), {
+  getPostsList,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke (+20 more)
+
+### Community 43 - "devDependencies"
+Cohesion: 0.05
+Nodes (39): cross-env, jest-environment-jsdom, jest-junit, jest-mock-extended, @nestjs/schematics, @nestjs/testing, devDependencies, cross-env (+31 more)
+
+### Community 44 - "AutopostService"
+Cohesion: 0.08
+Nodes (16): AutopostController, ApiTags, Body, Controller, Delete, Get, Param, Put (+8 more)
+
+### Community 45 - "PrismaRepository"
+Cohesion: 0.07
+Nodes (10): AutopostRepository, Injectable, PrismaRepository, PrismaService, PrismaTransaction, Injectable, ThirdPartyRepository, Injectable (+2 more)
+
+### Community 46 - "billing.controller.ts"
+Cohesion: 0.28
+Nodes (6): BillingCancelDto, IsBoolean, IsOptional, BillingSyncDto, IsDefined, IsString
+
+### Community 47 - "onboarding.modal.tsx"
+Cohesion: 0.09
+Nodes (31): apiTab, cliCommands, OnboardingAgent, onboardingAgents, OnboardingModal(), OnboardingModalProps, OnboardingStep2(), OnboardingTab (+23 more)
+
+### Community 48 - "SetsDto"
 Cohesion: 0.10
 Nodes (17): SetsController, ApiTags, Body, Controller, Delete, Get, Param, Put (+9 more)
 
-### Community 30 - "SignatureDto"
+### Community 49 - "SignatureDto"
 Cohesion: 0.10
 Nodes (16): SignatureController, ApiTags, Body, Controller, Delete, Get, Param, Put (+8 more)
 
-### Community 31 - "AutopostService"
-Cohesion: 0.04
-Nodes (35): AutopostActivity, Activity, ActivityMethod, Injectable, IntegrationsActivity, Activity, ActivityMethod, Injectable (+27 more)
+### Community 50 - "Post"
+Cohesion: 0.14
+Nodes (15): ApiTags, Body, CheckPolicies, Controller, Get, GetOrgFromRequest, GetUserFromRequest, Query (+7 more)
 
-### Community 32 - "OAuthService"
-Cohesion: 0.09
-Nodes (10): OAuthAuthorizedController, OAuthController, ApiTags, Controller, Get, Query, OAuthRepository, Injectable (+2 more)
+### Community 51 - "show.all.providers.tsx"
+Cohesion: 0.08
+Nodes (18): postType, AudioResult, formatDuration(), InstagramAudioSelector(), SelectedAudio, graduationStrategies, postType, Providers (+10 more)
 
-### Community 33 - "linkedin.page.provider.ts"
+### Community 52 - "XProvider"
+Cohesion: 0.10
+Nodes (4): isAllowedUploadPath(), PostPlug, Rules, XProvider
+
+### Community 53 - "CreateAgencyDto"
+Cohesion: 0.08
+Nodes (16): AgenciesRepository, Injectable, AgenciesService, Injectable, CreateAgencyDto, CreateAgencyLogoDto, ArrayMaxSize, ArrayMinSize (+8 more)
+
+### Community 54 - "BillingController"
+Cohesion: 0.20
+Nodes (10): BillingController, ApiTags, Body, CheckPolicies, Controller, Get, GetOrgFromRequest, GetUserFromRequest (+2 more)
+
+### Community 55 - "linkedin.page.provider.ts"
 Cohesion: 0.06
 Nodes (34): AboutPageViews, AllDesktopPageViews, AllMobilePageViews, AllPageViews, CareersPageViews, Clicks, DesktopAboutPageViews, DesktopCareersPageViews (+26 more)
 
-### Community 34 - "create.post.dto.ts"
-Cohesion: 0.08
-Nodes (22): Postiz, toQueryString(), ValidatorConstraint, ValidContent, CreatePostDto, Integration, PostContent, Tags (+14 more)
+### Community 56 - "ShortLinking"
+Cohesion: 0.09
+Nodes (8): Empty, getOptions(), Kutt, getOptions(), LinkDrip, options, ShortIo, ShortLinking
 
-### Community 35 - "images.slides.ts"
-Cohesion: 0.11
-Nodes (16): FalService, limit, Injectable, getAudioDuration(), ImagesSlides, ImagesSlidesParams, limit, transloadit (+8 more)
-
-### Community 36 - "AnnouncementDto"
+### Community 57 - "AnnouncementDto"
 Cohesion: 0.10
 Nodes (16): AnnouncementsController, ApiTags, Body, Controller, Delete, Get, Param, AnnouncementsRepository (+8 more)
 
-### Community 37 - ".connectSocialMedia"
-Cohesion: 0.07
-Nodes (15): EnterpriseController, ApiTags, Body, Controller, NoAuthIntegrationsController, ApiTags, Body, Controller (+7 more)
+### Community 58 - "NotificationService"
+Cohesion: 0.09
+Nodes (10): NotificationsController, ApiTags, Controller, Get, NotificationService, NotificationType, Injectable, NotificationsRepository (+2 more)
 
-### Community 38 - "app.module.ts"
-Cohesion: 0.07
-Nodes (20): ApiModule, Module, PublicApiModule, Module, AuthMiddleware, Injectable, ThirdPartyModule, Global (+12 more)
+### Community 59 - "is.general.server.side.ts"
+Cohesion: 0.08
+Nodes (11): metadata, metadata, metadata, metadata, metadata, metadata, metadata, metadata (+3 more)
 
-### Community 39 - "compilerOptions"
+### Community 60 - "layout.component.tsx"
+Cohesion: 0.09
+Nodes (21): BillingHistory(), formatAmount(), formatDate(), Invoice, useInvoices(), EmbeddedBilling, FeatureItem, FirstBillingComponent() (+13 more)
+
+### Community 61 - "LinkedinProvider"
+Cohesion: 0.10
+Nodes (4): LinkedinProvider, PostPlug, Rules, Tool
+
+### Community 62 - "MediaController"
+Cohesion: 0.13
+Nodes (13): MediaController, ApiTags, Body, Controller, Delete, Get, GetOrgFromRequest, Param (+5 more)
+
+### Community 63 - "internal.channels.tsx"
+Cohesion: 0.09
+Nodes (17): IntegrationContext, useIntegration(), delayOptions, ContinueModal(), ContinueProvider(), ModalContent(), ThreadFinisher(), DevtoSettings() (+9 more)
+
+### Community 64 - "list.tsx"
+Cohesion: 0.10
+Nodes (23): FacebookContinue, FacebookItem, GmbContinue, GmbItem, GmbSelection, InstagramContinue, InstagramItem, InstagramSelection (+15 more)
+
+### Community 65 - "compilerOptions"
 Cohesion: 0.06
 Nodes (30): compilerOptions, allowJs, allowSyntheticDefaultImports, esModuleInterop, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx (+22 more)
 
-### Community 40 - "AdminStatsRepository"
-Cohesion: 0.10
-Nodes (12): AdminStatsRepository, PerSocial, sortDesc(), StatsParams, StatsResponse, Injectable, AdminStatsService, Injectable (+4 more)
+### Community 66 - "app.module.ts"
+Cohesion: 0.05
+Nodes (25): AppModule, Global, Module, PublicApiModule, Module, DatabaseModule, Global, Module (+17 more)
 
-### Community 41 - "compilerOptions"
+### Community 67 - "compilerOptions"
 Cohesion: 0.07
 Nodes (29): compilerOptions, allowJs, allowSyntheticDefaultImports, esModuleInterop, forceConsistentCasingInFileNames, jsx, lib, module (+21 more)
 
-### Community 42 - "with-continue-provider.tsx"
-Cohesion: 0.11
-Nodes (22): FacebookContinue, FacebookItem, GmbContinue, GmbItem, GmbSelection, InstagramContinue, InstagramItem, InstagramSelection (+14 more)
+### Community 68 - "SocialAbstract"
+Cohesion: 0.10
+Nodes (6): isReadTimeout(), safeStringify(), SocialAbstract, stripQuery(), ListmonkProvider, Rules
 
-### Community 44 - "targets"
+### Community 69 - "main.billing.component.tsx"
+Cohesion: 0.12
+Nodes (20): AppleProvider, clientSecret(), defaultRedirect(), getConfig(), AuthProvider, FinishTrial(), BillingFeatures(), useBillingFeatures() (+12 more)
+
+### Community 70 - "ClippingActivity"
+Cohesion: 0.12
+Nodes (12): ClippingActivity, Activity, ActivityMethod, Injectable, {
+  checkClippingAnalyse,
+  checkClipFetch,
+  checkClipRender,
+  failClip,
+  createClippingDrafts,
+  finishClipping,
+  failClipping,
+}, clippingClipWorkflow(), clippingWorkflow(), reason() (+4 more)
+
+### Community 71 - "targets"
 Cohesion: 0.07
 Nodes (28): buckets, json, include, locale, source, targets, provider, baseUrl (+20 more)
 
-### Community 47 - "PostActivity"
-Cohesion: 0.14
-Nodes (15): PostActivity, slimPost(), Activity, ActivityMethod, Injectable, postWorkflowV101(), proxyTaskQueue(), postWorkflowV102() (+7 more)
+### Community 72 - "getSsrfSafeDispatcher"
+Cohesion: 0.10
+Nodes (6): getSsrfSafeDispatcher(), LemmyProvider, Tool, Rules, Tool, WordpressProvider
 
-### Community 48 - "scripts"
+### Community 73 - "GetUserFromRequest"
+Cohesion: 0.12
+Nodes (15): AdminController, ApiTags, Body, Controller, Delete, Get, Param, Query (+7 more)
+
+### Community 74 - "IntegrationsController"
+Cohesion: 0.20
+Nodes (9): IntegrationsController, ApiTags, Body, CheckPolicies, Controller, Delete, GetOrgFromRequest, Param (+1 more)
+
+### Community 75 - "useUser"
+Cohesion: 0.12
+Nodes (16): LifetimeDeal(), ActionControls(), CloseContext, Polonto(), GenerateTab, PictureGeneratorPanel, PictureGeneratorSection, store (+8 more)
+
+### Community 76 - "OAuthRepository"
+Cohesion: 0.10
+Nodes (3): SelfHostedInstance, OAuthRepository, Injectable
+
+### Community 77 - "TrackService"
+Cohesion: 0.11
+Nodes (14): PublicController, pump, ApiTags, Body, Controller, Get, Param, Query (+6 more)
+
+### Community 79 - "scripts"
 Cohesion: 0.07
 Nodes (27): scripts, build, build:backend, build:extension, build:frontend, build:orchestrator, commands:build:development, dev (+19 more)
 
-### Community 49 - "OAuthAppController"
-Cohesion: 0.08
-Nodes (18): OAuthAppController, ApiTags, Body, Controller, Delete, Get, Put, CreateOAuthAppDto (+10 more)
-
-### Community 50 - "compilerOptions"
+### Community 80 - "compilerOptions"
 Cohesion: 0.08
 Nodes (25): compilerOptions, allowSyntheticDefaultImports, declaration, emitDecoratorMetadata, experimentalDecorators, forceConsistentCasingInFileNames, incremental, module (+17 more)
 
-### Community 51 - "compilerOptions"
+### Community 81 - "compilerOptions"
 Cohesion: 0.08
 Nodes (25): compilerOptions, allowSyntheticDefaultImports, declaration, emitDecoratorMetadata, experimentalDecorators, forceConsistentCasingInFileNames, incremental, module (+17 more)
 
-### Community 52 - "compilerOptions"
+### Community 82 - "compilerOptions"
 Cohesion: 0.08
 Nodes (25): compilerOptions, allowSyntheticDefaultImports, declaration, emitDecoratorMetadata, experimentalDecorators, forceConsistentCasingInFileNames, incremental, module (+17 more)
 
-### Community 53 - "LinkedinPageProvider"
+### Community 83 - "AgentGraphService"
+Cohesion: 0.08
+Nodes (3): AgentGraphService, contentZod(), Injectable
+
+### Community 84 - "PaymentProviderAbstract"
 Cohesion: 0.10
-Nodes (3): LinkedinPageProvider, Plug, SkoolProvider
+Nodes (8): BillingSubscribeDto, IsIn, Transform, PaymentInvoice, PaymentProvider(), PaymentProviderAbstract, PaymentProviderParams, stripe
 
-### Community 54 - "MastodonProvider"
-Cohesion: 0.12
-Nodes (3): MastodonCustomProvider, MastodonProvider, ClientInformation
+### Community 85 - "permission.exception.class.ts"
+Cohesion: 0.19
+Nodes (11): ChannelsContext, AuthorizationActions, Sections, SubscriptionException, AbilityPolicy, CheckPolicies(), getErrorMessage(), SubscriptionExceptionFilter (+3 more)
 
-### Community 55 - "posts.list.minify.ts"
-Cohesion: 0.13
-Nodes (22): expandPostItem(), expandPosts(), expandPostsList(), INTEGRATION_KEYS, mapKeys(), minifyPostItem(), minifyPosts(), minifyPostsList() (+14 more)
-
-### Community 56 - "main.ts"
-Cohesion: 0.11
-Nodes (16): PostValidationExceptionFilter, Catch, AppModule, Global, Module, start(), getErrorMessage(), SubscriptionExceptionFilter (+8 more)
-
-### Community 57 - "AuthProviderAbstract"
+### Community 86 - "AdminStatsRepository"
 Cohesion: 0.15
-Nodes (8): client, FarcasterProvider, GithubProvider, AuthProvider(), AuthProviderAbstract, AuthProviderParams, hexToUint8Array(), WalletProvider
+Nodes (9): AdminStatsRepository, OrgActivityParams, OrgActivityResponse, PerSocial, PerState, sortDesc(), StatsParams, StatsResponse (+1 more)
 
-### Community 58 - "ai.video.tsx"
+### Community 87 - "OAuthController"
 Cohesion: 0.14
-Nodes (16): AiVideo(), AiVideoModal(), Modal(), MultiMediaComponent(), Voice, Voices, VoiceSelector(), VEO3Settings() (+8 more)
+Nodes (12): OAuthAuthorizedController, OAuthController, ApiTags, Body, Controller, Get, Query, Res (+4 more)
 
-### Community 60 - "compilerOptions"
+### Community 88 - "comments.components.tsx"
+Cohesion: 0.13
+Nodes (19): Auth(), metadata, CommentBody(), CommentComposer(), CommentsComponents(), loadRecaptchaToken(), ThreadCard(), ActiveThread (+11 more)
+
+### Community 89 - "TiktokBusinessProvider"
+Cohesion: 0.17
+Nodes (3): TiktokBusinessProvider, Rules, Tool
+
+### Community 90 - "compilerOptions"
 Cohesion: 0.08
 Nodes (24): compilerOptions, allowSyntheticDefaultImports, baseUrl, declaration, emitDecoratorMetadata, esModuleInterop, experimentalDecorators, forceConsistentCasingInFileNames (+16 more)
 
-### Community 61 - "ThirdPartyController"
-Cohesion: 0.17
-Nodes (9): ThirdPartyController, ApiTags, Body, Controller, Delete, Get, Param, ThirdPartyManager (+1 more)
+### Community 91 - ".getSocialIntegration"
+Cohesion: 0.16
+Nodes (6): AnalyticsController, ApiTags, Controller, Get, Param, Query
 
-### Community 63 - "auth.middleware.ts"
+### Community 92 - "GetOrgFromRequest"
 Cohesion: 0.13
-Nodes (11): removeAuth(), PublicAuthMiddleware, Injectable, AppModule, Module, bootstrap(), initializeSentry(), setSentryUserContext() (+3 more)
+Nodes (13): OAuthAppController, ApiTags, Controller, Delete, Get, SettingsController, ApiTags, Body (+5 more)
 
-### Community 66 - "AuthService"
+### Community 93 - ".token"
+Cohesion: 0.14
+Nodes (20): Register(), createIntrospectionValidator(), createOAuthMiddleware(), createStaticTokenValidator(), IntrospectionResponse, OAuthMiddlewareLogger, OAuthMiddlewareOptions, OAuthMiddlewareResult (+12 more)
+
+### Community 95 - "OAuthService"
+Cohesion: 0.16
+Nodes (6): enableOidcEmailClaims(), isVerifiedHost(), OAuthService, openAiOAuthClientId(), selfHostedRelayEnabled(), Injectable
+
+### Community 96 - "register.tsx"
+Cohesion: 0.14
+Nodes (10): metadata, Inputs, Login(), AppleProvider(), FarcasterProvider(), GoogleProvider(), WalletUiProvider(), WalletProvider() (+2 more)
+
+### Community 97 - "reddit.provider.tsx"
+Cohesion: 0.13
+Nodes (18): RedditSettings(), Subreddit(), RedditFlairDto, RedditSettingsDto, RedditSettingsDtoInner, RedditSettingsValueDto, ArrayMinSize, IsBoolean (+10 more)
+
+### Community 98 - "PostActivity"
 Cohesion: 0.19
-Nodes (3): AuthService, Injectable, NewsletterService
+Nodes (6): PostActivity, Activity, ActivityMethod, Injectable, missingPostWorkflow(), { searchForMissingThreeHoursPosts }
 
-### Community 67 - "agent.chat.tsx"
+### Community 99 - "overrides"
+Cohesion: 0.10
+Nodes (21): bcrypt, bcrypt, @ai-sdk/provider-utils@3>undici, engine.io-client>ws, @modelcontextprotocol/client, @modelcontextprotocol/core, @modelcontextprotocol/node, @modelcontextprotocol/server (+13 more)
+
+### Community 100 - "oauth.controller.ts"
 Cohesion: 0.13
-Nodes (13): metadata, metadata, Agent(), AgentList(), AgentChat(), Hooks(), LoadMessages(), OpenModal() (+5 more)
+Nodes (20): RFC-6749, RFC-7591, ApproveOAuthDto, AuthorizeOAuthQueryDto, AuthorizeSelfHostedDto, RFC-8707, IsDefined, IsEmail (+12 more)
 
-### Community 68 - "NotificationsRepository"
+### Community 101 - "email.service.ts"
+Cohesion: 0.18
+Nodes (9): RFC-2047, EmailInterface, EmptyProvider, NodeMailerProvider, transporter, resend, ResendProvider, ses (+1 more)
+
+### Community 103 - "YoutubeSettingsDto"
 Cohesion: 0.12
-Nodes (6): NotificationsController, ApiTags, Controller, Get, NotificationsRepository, Injectable
+Nodes (17): getYoutubeTagsLength(), IsYoutubeTagsLength(), IsYoutubeTagsLengthConstraint, IsArray, IsBoolean, IsDefined, IsIn, IsOptional (+9 more)
 
-### Community 69 - "oauth-middleware.ts"
-Cohesion: 0.17
-Nodes (17): createIntrospectionValidator(), createOAuthMiddleware(), createStaticTokenValidator(), IntrospectionResponse, OAuthMiddlewareLogger, OAuthMiddlewareOptions, OAuthMiddlewareResult, RFC-9728 (+9 more)
+### Community 104 - ".createPost"
+Cohesion: 0.11
+Nodes (3): ISocialMediaIntegration, ShortLinkService, Injectable
 
-### Community 70 - "WebhooksDto"
-Cohesion: 0.17
-Nodes (14): ApiTags, Body, Controller, Put, Query, WebhookController, OnlyURL, IsDefined (+6 more)
-
-### Community 71 - "MastraService"
-Cohesion: 0.16
-Nodes (11): ChatModule, Global, Module, AgentState, LoadToolsService, renderArray(), Injectable, MastraService (+3 more)
-
-### Community 73 - "AutopostController"
-Cohesion: 0.12
-Nodes (7): AutopostController, ApiTags, Controller, Delete, Get, Param, Query
-
-### Community 74 - "ConfigurationChecker"
-Cohesion: 0.21
-Nodes (5): checkConfiguration(), ConfigurationTask, Command, Injectable, ConfigurationChecker
-
-### Community 75 - "internal.channels.tsx"
-Cohesion: 0.16
-Nodes (10): PickPlatforms(), emitter, useMoveToIntegrationListener(), delayOptions, Plug(), EmailNotifications, EmailNotificationsComponent(), useEmailNotifications() (+2 more)
-
-### Community 76 - "heygen.provider.tsx"
-Cohesion: 0.20
-Nodes (12): aspectRatio, generateCaptions, HeygenProviderComponent(), useThirdPartyFunction(), useThirdPartyFunctionSWR(), useThirdPartySubmit(), ThirdPartyContext, ThirdPartyMedia() (+4 more)
-
-### Community 77 - "package.json"
+### Community 105 - "package.json"
 Cohesion: 0.11
 Nodes (18): author, dependencies, node-fetch, description, files, node-fetch, dist, keywords (+10 more)
 
-### Community 78 - "HeygenProvider"
-Cohesion: 0.19
-Nodes (5): HeygenProvider, ReelFarmProvider, ThirdParty(), ThirdPartyAbstract, ThirdPartyParams
+### Community 107 - "images.slides.ts"
+Cohesion: 0.17
+Nodes (10): ExposeVideoFunction, FalService, limit, Injectable, elevenLabsError(), getAudioDuration(), ImagesSlides, limit (+2 more)
 
-### Community 79 - "agent.graph.service.ts"
-Cohesion: 0.12
-Nodes (14): category, contentZod(), dalle, hook, model, toolNode, topic, WorkflowChannelsState (+6 more)
+### Community 108 - "encryption.service.ts"
+Cohesion: 0.20
+Nodes (7): PostListStateFilter, AwsKmsProvider, kms, EmptyProvider, EncryptionInterface, LocalProvider, integrationEncryptedFields
 
-### Community 81 - "AgenciesRepository"
-Cohesion: 0.15
-Nodes (4): AgenciesRepository, Injectable, AgenciesService, Injectable
+### Community 109 - "all.providers.settings.ts"
+Cohesion: 0.17
+Nodes (13): allProviders(), AllProvidersSettings, EmptySettings, None, ProviderExtension, IsIn, MoltbookDto, IsOptional (+5 more)
 
-### Community 82 - "MediaDto"
-Cohesion: 0.12
-Nodes (18): MediaDto, IsDefined, IsString, IsUrl, Validate, ValidateIf, HashnodeSettingsDto, HashnodeTagsSettings (+10 more)
+### Community 110 - "NewsletterInterface"
+Cohesion: 0.20
+Nodes (6): NewsletterInterface, NewsletterService, BeehiivProvider, EmailEmptyProvider, ListmonkProvider, newsletterProviders
 
-### Community 83 - "PublicController"
-Cohesion: 0.15
-Nodes (11): PublicController, pump, ApiTags, Body, Controller, Get, Param, Query (+3 more)
-
-### Community 84 - "devto.provider.tsx"
-Cohesion: 0.16
-Nodes (12): MediaComponent(), DevtoSettings(), DevtoTags(), SelectOrganization(), MediumSettings(), MediumPublications(), MediumTags(), madeForKids (+4 more)
-
-### Community 86 - "YoutubeSettingsDto"
-Cohesion: 0.14
-Nodes (15): getYoutubeTagsLength(), IsYoutubeTagsLength(), IsYoutubeTagsLengthConstraint, IsArray, IsDefined, IsIn, IsOptional, IsString (+7 more)
-
-### Community 88 - "nest-cli.json"
+### Community 111 - "nest-cli.json"
 Cohesion: 0.12
 Nodes (16): collection, compilerOptions, assets, deleteOutDir, manualRestart, plugins, tsConfigPath, watchAssets (+8 more)
 
-### Community 89 - "nest-cli.json"
+### Community 112 - "CreateOAuthAppDto"
+Cohesion: 0.12
+Nodes (13): Body, Put, CreateOAuthAppDto, IsDefined, IsOptional, IsString, IsUrl, MaxLength (+5 more)
+
+### Community 113 - "ClippingService"
+Cohesion: 0.18
+Nodes (4): ClippingWidgetAuthMiddleware, Injectable, ClippingService, Injectable
+
+### Community 114 - "nest-cli.json"
 Cohesion: 0.12
 Nodes (16): collection, compilerOptions, assets, deleteOutDir, manualRestart, plugins, tsConfigPath, watchAssets (+8 more)
 
-### Community 90 - "manifest.json"
+### Community 115 - "manifest.json"
 Cohesion: 0.12
 Nodes (16): background, service_worker, type, description, host_permissions, icons, 128, 32 (+8 more)
 
-### Community 91 - "nest-cli.json"
+### Community 116 - "nest-cli.json"
 Cohesion: 0.12
 Nodes (16): collection, compilerOptions, assets, deleteOutDir, manualRestart, plugins, tsConfigPath, watchAssets (+8 more)
 
-### Community 92 - "paths"
+### Community 117 - "EmailActivity"
+Cohesion: 0.21
+Nodes (9): EmailActivity, Activity, ActivityMethod, Injectable, digestEmailWorkflow(), sendEmailWorkflow(), { sendEmailAsync, getUserOrgs, setStreak, getLastPublishDate }, streakWorkflow() (+1 more)
+
+### Community 118 - "CreatePostDto"
+Cohesion: 0.18
+Nodes (17): CreatePostDto, Integration, PostContent, Tags, ArrayMinSize, IsArray, IsBoolean, IsDateString (+9 more)
+
+### Community 119 - "GmbProvider"
+Cohesion: 0.16
+Nodes (3): clientAndGmb(), GmbProvider, Rules
+
+### Community 120 - "paths"
 Cohesion: 0.12
 Nodes (17): apps/backend/src/*, apps/extension/src/*, apps/orchestrator/src/*, libraries/helpers/src/*, libraries/nestjs-libraries/src/*, libraries/plugins/src/*, libraries/react-shared-libraries/src/*, node_modules/@langchain/langgraph/dist/prebuilt/index.d.ts (+9 more)
 
-### Community 93 - "AutopostDto"
-Cohesion: 0.17
-Nodes (12): Body, Put, AutopostDto, Integrations, IsArray, IsBoolean, IsDefined, IsOptional (+4 more)
+### Community 121 - "CopilotController"
+Cohesion: 0.21
+Nodes (10): CopilotController, copilotCors(), CheckPolicies, Controller, Get, GetOrgFromRequest, Param, Query (+2 more)
 
-### Community 94 - "package.json"
+### Community 122 - "AuthProviderAbstract"
+Cohesion: 0.20
+Nodes (7): AuthProvider(), AuthProviderAbstract, AuthProviderParams, AuthProviderManager, Injectable, hexToUint8Array(), WalletProvider
+
+### Community 123 - "package.json"
 Cohesion: 0.12
 Nodes (15): author, description, keywords, license, name, scripts, build, build:sentry (+7 more)
 
-### Community 95 - "admin-stats.component.tsx"
+### Community 124 - "admin-stats.component.tsx"
 Cohesion: 0.15
 Nodes (8): metadata, AdminStatsComponent(), PerSocial, PRESETS, StatsBlock, StatsResponse, today(), useStats()
 
-### Community 96 - "preview.provider.component.tsx"
-Cohesion: 0.18
-Nodes (12): InitPayload, Window, IntegrationContextType, getProviderSettingsMeta(), Providers, DEFAULT_INTEGRATION, flattenFormErrors(), MockIntegration (+4 more)
-
-### Community 97 - "facebook.provider.tsx"
-Cohesion: 0.22
-Nodes (13): getPresetBackground(), hexToRgb(), luminance(), mix(), ORDER, PALETTE, PresetBackground, rgbToHex() (+5 more)
-
-### Community 98 - "ThirdPartyRepository"
+### Community 125 - "AuthService"
 Cohesion: 0.17
-Nodes (4): ThirdPartyRepository, Injectable, ThirdPartyService, Injectable
+Nodes (7): AuthService, decrypt_legacy_using_IV(), deriveLegacyKeyIv(), encrypt_legacy_using_IV(), { keyLength, ivLength }, CodesService, Injectable
 
-### Community 99 - "DevToSettingsDto"
+### Community 126 - "DevToSettingsDto"
 Cohesion: 0.14
 Nodes (14): DevToSettingsDto, ArrayMaxSize, IsArray, IsDefined, IsOptional, IsString, Matches, MinLength (+6 more)
 
-### Community 100 - "RedditSettingsDto"
-Cohesion: 0.18
-Nodes (15): RedditFlairDto, RedditSettingsDto, RedditSettingsDtoInner, RedditSettingsValueDto, ArrayMinSize, IsBoolean, IsDefined, IsString (+7 more)
+### Community 127 - "r2.uploader.ts"
+Cohesion: 0.28
+Nodes (14): abortMultipartUpload(), ALLOWED_EXT_TO_MIME, completeMultipartUpload(), createMultipartUpload(), { fileTypeFromBuffer }, generateRandomString(), handleR2Upload(), listParts() (+6 more)
 
-### Community 102 - "package.json"
+### Community 128 - "package.json"
 Cohesion: 0.12
 Nodes (15): author, description, engines, node, jest-junit, outputDirectory, outputName, keywords (+7 more)
 
-### Community 103 - "AuthController"
-Cohesion: 0.19
-Nodes (10): AuthController, ApiTags, Body, Controller, Get, Param, Query, RealIP (+2 more)
+### Community 129 - "preview.provider.component.tsx"
+Cohesion: 0.20
+Nodes (11): InitPayload, Window, IntegrationContextType, getProviderSettingsMeta(), DEFAULT_INTEGRATION, flattenFormErrors(), MockIntegration, ProviderPreviewComponent() (+3 more)
 
-### Community 104 - "command.module.ts"
-Cohesion: 0.16
-Nodes (9): CommandModule, Module, bootstrap(), AgentRun, Command, Injectable, DatabaseModule, Global (+1 more)
-
-### Community 105 - "compilerOptions"
+### Community 131 - "compilerOptions"
 Cohesion: 0.13
 Nodes (14): compilerOptions, allowSyntheticDefaultImports, declaration, esModuleInterop, incremental, module, removeComments, rootDir (+6 more)
 
-### Community 106 - "media.dto.ts"
-Cohesion: 0.17
-Nodes (7): ValidatorConstraint, ValidUrlExtension, ValidUrlPath, IsDefined, IsString, Validate, UploadDto
+### Community 132 - "posts.list.minify.ts"
+Cohesion: 0.26
+Nodes (14): expandPostItem(), expandPosts(), expandPostsList(), INTEGRATION_KEYS, mapKeys(), minifyPostItem(), minifyPosts(), minifyPostsList() (+6 more)
 
-### Community 107 - "webhook.url.validator.ts"
-Cohesion: 0.17
-Nodes (7): isBlockedIp(), isBlockedIPv4(), isBlockedIPv6(), isSafePublicHttpsUrl(), IsSafeWebhookUrlConstraint, ValidatorConstraint, CloudflareStorage
-
-### Community 108 - "NewsletterInterface"
-Cohesion: 0.25
-Nodes (5): NewsletterInterface, BeehiivProvider, EmailEmptyProvider, ListmonkProvider, newsletterProviders
-
-### Community 109 - "local.storage.ts"
+### Community 133 - "ErrorsRepository"
 Cohesion: 0.18
-Nodes (5): parseDataUrl(), { fromBuffer }, LOCAL_STORAGE_ALLOWED_MIME, LocalStorage, IUploadProvider
+Nodes (5): ErrorsRepository, ListErrorsParams, Injectable, ErrorsService, Injectable
 
-### Community 110 - "CopilotController"
-Cohesion: 0.21
-Nodes (7): CopilotController, Controller, Get, Param, Query, Req, Res
+### Community 134 - "ClippingController"
+Cohesion: 0.18
+Nodes (8): ClippingController, ApiTags, Body, Controller, Get, GetOrgFromRequest, Param, Query
 
-### Community 111 - "background.ts"
+### Community 135 - "background.ts"
 Cohesion: 0.20
 Nodes (11): ALLOWED_ORIGIN_PATTERNS, clearAlarmIfEmpty(), extractCookies(), getStoredEntries(), isOriginAllowed(), refreshAllCookies(), getProvider(), ExtensionRequest (+3 more)
 
-### Community 112 - "deny"
+### Community 136 - "MediaActivity"
+Cohesion: 0.22
+Nodes (8): MediaActivity, Activity, ActivityMethod, Injectable, { checkMediaProcessing, failMediaProcessing }, processMediaWorkflow(), reason(), { submitMediaProcessing }
+
+### Community 137 - "postWorkflowV110"
+Cohesion: 0.20
+Nodes (10): reanchorInterval(), slimPost(), {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV110(), proxyCheckTaskQueue(), proxyCommentTaskQueue() (+2 more)
+
+### Community 138 - "Postiz"
+Cohesion: 0.18
+Nodes (6): Postiz, toQueryString(), GetPostsDto, IsDateString, IsOptional, IsString
+
+### Community 139 - "deny"
 Cohesion: 0.14
 Nodes (13): permissions, deny, $schema, Bash(cat .env), Bash(head .env), Bash(less .env), Bash(more .env), Bash(nano .env) (+5 more)
 
-### Community 114 - "CreateAgencyDto"
-Cohesion: 0.16
-Nodes (12): CreateAgencyDto, CreateAgencyLogoDto, ArrayMaxSize, ArrayMinSize, IsDefined, IsIn, IsOptional, IsString (+4 more)
-
-### Community 115 - "InstagramDto"
-Cohesion: 0.20
-Nodes (13): Collaborators, InstagramAudio, InstagramDto, IsArray, IsDefined, IsIn, IsNumber, IsOptional (+5 more)
-
-### Community 116 - "r2.uploader.ts"
-Cohesion: 0.31
-Nodes (13): abortMultipartUpload(), ALLOWED_EXT_TO_MIME, completeMultipartUpload(), createMultipartUpload(), { fromBuffer }, generateRandomString(), handleR2Upload(), listParts() (+5 more)
-
-### Community 117 - "compilerOptions"
+### Community 142 - "compilerOptions"
 Cohesion: 0.14
 Nodes (13): compilerOptions, allowSyntheticDefaultImports, esModuleInterop, forceConsistentCasingInFileNames, noFallthroughCasesInSwitch, noImplicitOverride, noImplicitReturns, strict (+5 more)
 
-### Community 118 - "tsconfig.lib.json"
+### Community 143 - "tsconfig.lib.json"
 Cohesion: 0.14
 Nodes (13): compilerOptions, declaration, esModuleInterop, outDir, types, exclude, extends, include (+5 more)
 
-### Community 119 - "CreateOrgUserDto"
-Cohesion: 0.17
-Nodes (7): CreateOrgUserDto, IsDefined, IsEmail, IsString, MaxLength, MinLength, ValidateIf
+### Community 144 - "ClippingWidgetController"
+Cohesion: 0.15
+Nodes (8): ClippingWidgetController, ApiTags, Controller, Get, GetOrgFromRequest, Query, Req, Header
 
-### Community 120 - "LemmySettingsDto"
+### Community 145 - "Get"
+Cohesion: 0.18
+Nodes (3): Get, GetUserFromRequest, Query
+
+### Community 146 - "PermissionsService"
+Cohesion: 0.19
+Nodes (6): PoliciesGuard, Injectable, AppAbility, PermissionsService, Injectable, useHasScroll()
+
+### Community 147 - "stars.and.forks.tsx"
+Cohesion: 0.24
+Nodes (9): Chart(), ChartSocial(), mergeDataPoints(), ForksList, Stars, StarsAndForksInterface, StarsList, TotalList (+1 more)
+
+### Community 148 - "announcement.banner.tsx"
+Cohesion: 0.22
+Nodes (10): ApprovedAppsComponent(), useApprovedApps(), Announcement, AnnouncementBanner(), AnnouncementColor, AnnouncementDetailModal(), colorStyles, useAnnouncements() (+2 more)
+
+### Community 149 - "IntegrationsActivity"
+Cohesion: 0.21
+Nodes (8): IntegrationsActivity, Activity, ActivityMethod, Injectable, { encryptStoredTokens }, encryptTokensWorkflow(), { getIntegrationsById, refreshToken }, refreshTokenWorkflow()
+
+### Community 150 - "postWorkflowV112"
+Cohesion: 0.21
+Nodes (9): { autoPost }, {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV112(), proxyCheckTaskQueue(), proxyCommentTaskQueue(), proxyMutationTaskQueue() (+1 more)
+
+### Community 151 - ".exchangeCodeForToken"
+Cohesion: 0.15
+Nodes (3): GetOrgFromRequest, GetUserFromRequest, hubspotOAuthClientId()
+
+### Community 152 - "MediaDto"
+Cohesion: 0.17
+Nodes (11): MediaDto, IsDefined, IsString, IsUrl, Validate, ValidateIf, IsOptional, IsString (+3 more)
+
+### Community 153 - "HashnodeSettingsDto"
+Cohesion: 0.17
+Nodes (12): HashnodeSettingsDto, HashnodeTagsSettings, ArrayMinSize, IsArray, IsDefined, IsOptional, IsString, Matches (+4 more)
+
+### Community 154 - "LemmySettingsDtoInner"
 Cohesion: 0.19
 Nodes (12): LemmySettingsDto, LemmySettingsDtoInner, LemmySettingsValueDto, ArrayMinSize, IsDefined, IsOptional, IsString, IsUrl (+4 more)
 
-### Community 121 - "MediumSettingsDto"
+### Community 155 - "MediumSettingsDto"
 Cohesion: 0.17
 Nodes (12): MediumSettingsDto, MediumTagsSettings, ArrayMaxSize, IsArray, IsDefined, IsOptional, IsString, Matches (+4 more)
 
-### Community 124 - "compilerOptions"
+### Community 156 - "FarcasterProvider"
+Cohesion: 0.15
+Nodes (3): FarcasterProvider, Rules, Tool
+
+### Community 157 - "compilerOptions"
 Cohesion: 0.15
 Nodes (12): compilerOptions, forceConsistentCasingInFileNames, module, noFallthroughCasesInSwitch, noImplicitOverride, noImplicitReturns, strict, extends (+4 more)
 
-### Community 125 - "tsconfig.lib.json"
+### Community 158 - "tsconfig.lib.json"
 Cohesion: 0.15
 Nodes (12): compilerOptions, declaration, outDir, types, exclude, extends, include, node (+4 more)
 
-### Community 126 - "package.json"
+### Community 159 - "package.json"
 Cohesion: 0.17
 Nodes (11): author, description, keywords, license, name, scripts, build, dev (+3 more)
 
-### Community 127 - "oauth.controller.ts"
-Cohesion: 0.27
-Nodes (9): ApproveOAuthDto, AuthorizeOAuthQueryDto, IsDefined, IsIn, IsOptional, IsString, TokenExchangeDto, IsDefined (+1 more)
+### Community 160 - "ClippingDto"
+Cohesion: 0.18
+Nodes (10): ClippingDto, ArrayMaxSize, IsArray, IsIn, IsInt, IsOptional, IsString, IsUrl (+2 more)
 
-### Community 129 - "messages.ts"
+### Community 161 - "EnterpriseController"
+Cohesion: 0.24
+Nodes (4): EnterpriseController, ApiTags, Body, Controller
+
+### Community 162 - "MediaWidgetController"
+Cohesion: 0.20
+Nodes (9): MediaWidgetController, ApiTags, Body, Controller, Get, GetOrgFromRequest, Req, UploadedFile (+1 more)
+
+### Community 163 - "messages.ts"
 Cohesion: 0.17
 Nodes (11): ErrorResponse, ExtensionResponse, GetCookiesErrorResponse, GetCookiesRequest, GetCookiesSuccessResponse, GetProvidersRequest, GetProvidersResponse, PingRequest (+3 more)
 
-### Community 130 - "sentry.component.tsx"
+### Community 164 - "initialize.sentry.client.ts"
 Cohesion: 0.30
 Nodes (5): SentryComponent(), register(), initializeSentryClient(), initializeSentryBasic(), initializeSentryServer()
 
-### Community 131 - "package.json"
+### Community 165 - "image-text-slides.provider.tsx"
+Cohesion: 0.23
+Nodes (8): Voice, Voices, VoiceSelector(), useVideo(), VideoContextWrapper, useVideoFunction(), videosList, videoWrapper()
+
+### Community 166 - "package.json"
 Cohesion: 0.17
 Nodes (11): author, description, keywords, license, name, scripts, build, dev (+3 more)
 
-### Community 132 - "CreateGeneratedPostsDto"
+### Community 167 - "postWorkflowV108"
+Cohesion: 0.23
+Nodes (8): {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV108(), proxyCheckTaskQueue(), proxyCommentTaskQueue(), proxyMutationTaskQueue(), proxyTaskQueue()
+
+### Community 168 - "postWorkflowV107"
+Cohesion: 0.23
+Nodes (8): {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV107(), proxyCheckTaskQueue(), proxyCommentTaskQueue(), proxyMutationTaskQueue(), proxyTaskQueue()
+
+### Community 169 - "postWorkflowV109"
+Cohesion: 0.23
+Nodes (8): {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV109(), proxyCheckTaskQueue(), proxyCommentTaskQueue(), proxyMutationTaskQueue(), proxyTaskQueue()
+
+### Community 170 - "CreateGeneratedPostsDto"
 Cohesion: 0.27
 Nodes (11): CreateGeneratedPostsDto, InnerPost, PostGroup, ArrayMinSize, IsArray, IsDefined, IsNumber, IsString (+3 more)
 
-### Community 134 - "compilerOptions"
+### Community 171 - "XDto"
+Cohesion: 0.17
+Nodes (11): IsBoolean, IsIn, IsOptional, IsString, JSONSchema, Matches, MinLength, Type (+3 more)
+
+### Community 174 - "compilerOptions"
 Cohesion: 0.18
 Nodes (10): compilerOptions, allowSyntheticDefaultImports, declaration, esModuleInterop, module, removeComments, sourceMap, target (+2 more)
 
-### Community 135 - "package.json"
+### Community 175 - "package.json"
 Cohesion: 0.18
 Nodes (10): author, description, keywords, license, name, scripts, build, dev (+2 more)
 
-### Community 136 - "compilerOptions"
+### Community 176 - "compilerOptions"
 Cohesion: 0.18
 Nodes (10): compilerOptions, allowSyntheticDefaultImports, declaration, esModuleInterop, module, removeComments, sourceMap, target (+2 more)
 
-### Community 137 - "page.tsx"
-Cohesion: 0.24
-Nodes (8): metadata, CreationMethod, CreationMethodBadge(), Props, tooltipFor(), CommentsComponents(), RenderPreviewDate, RenderPreviewDateClient()
-
-### Community 138 - "getCookieUrlFromDomain"
-Cohesion: 0.27
-Nodes (4): config, proxy(), getCookieUrlFromDomain(), languages
-
-### Community 139 - ".createPost"
-Cohesion: 0.22
-Nodes (4): hasLinks(), stripLinks(), urlRegex(), ISocialMediaIntegration
-
-### Community 140 - "LinkedinDto"
-Cohesion: 0.22
-Nodes (4): LinkedinDto, IsBoolean, IsOptional, IsString
-
-### Community 141 - "LoginUserDto"
-Cohesion: 0.33
-Nodes (6): LoginUserDto, IsDefined, IsEmail, IsString, MinLength, ValidateIf
-
-### Community 142 - "AdminApplyCouponDto"
-Cohesion: 0.20
-Nodes (8): IsInt, AdminApplyCouponDto, IsDefined, IsIn, IsNumber, IsString, Max, Min
-
-### Community 143 - "getT"
-Cohesion: 0.27
-Nodes (7): AuthLayout(), ReturnUrlComponent, metadata, Page(), TestimonialComponent(), LogoTextComponent(), getT()
-
-### Community 145 - "compilerOptions"
-Cohesion: 0.20
-Nodes (9): compilerOptions, allowSyntheticDefaultImports, declaration, module, removeComments, sourceMap, target, extends (+1 more)
-
-### Community 146 - "overrides"
-Cohesion: 0.20
-Nodes (10): bcrypt, bcrypt, next, react, react-dom, @types/react, @types/react-dom, pnpm (+2 more)
-
-### Community 147 - "agent.graph.insert.service.ts"
-Cohesion: 0.24
-Nodes (7): agentCategories, category, hook, model, topic, WorkflowChannelsState, agentTopics
-
-### Community 148 - "WordpressDto"
-Cohesion: 0.20
-Nodes (10): IsArray, IsDefined, IsIn, IsNumber, IsOptional, IsString, MinLength, Type (+2 more)
-
-### Community 152 - "ApprovedAppsController"
-Cohesion: 0.22
-Nodes (6): ApprovedAppsController, ApiTags, Controller, Delete, Get, Param
-
-### Community 153 - "ForgotReturnPasswordDto"
-Cohesion: 0.22
-Nodes (6): ForgotReturnPasswordDto, IsDefined, IsIn, IsString, MinLength, ValidateIf
-
-### Community 154 - "vite.config.base.ts"
-Cohesion: 0.33
-Nodes (6): crxI18n(), stripDevIcons(), providers, baseBuildOptions, baseManifest, outDir
-
-### Community 155 - "page.tsx"
-Cohesion: 0.36
-Nodes (6): Auth(), metadata, customFetch(), fetchBackend, Params, internalFetch()
-
-### Community 156 - "IntegrationTimeDto"
+### Community 177 - "postWorkflowV111"
 Cohesion: 0.25
-Nodes (7): IntegrationTimeDto, IntegrationValidateTimeDto, IsArray, IsDefined, IsNumber, Type, ValidateNested
+Nodes (8): {
+  getPostsList,
+  getPost,
+  inAppNotification,
+  changeState,
+  updatePost,
+  sendWebhooks,
+  isCommentable,
+}, iterate, poke, postWorkflowV111(), proxyCheckTaskQueue(), proxyCommentTaskQueue(), proxyMutationTaskQueue(), proxyTaskQueue()
 
-### Community 157 - "PinterestSettingsDto"
+### Community 178 - "oauth.service.ts"
+Cohesion: 0.15
+Nodes (14): ArrayNotEmpty, RFC-8252, browserSchemes, EmailClaimsApp, hubspotAppClientId(), hubspotAppClientSecret(), hubspotInstallRedirectUri(), hubspotInstallUrl() (+6 more)
+
+### Community 179 - "GetPostsListDto"
+Cohesion: 0.20
+Nodes (9): GetPostsListDto, IsArray, IsIn, IsNumber, IsOptional, IsString, Max, Min (+1 more)
+
+### Community 180 - "AutopostDto"
 Cohesion: 0.22
-Nodes (8): PinterestSettingsDto, IsDefined, IsString, IsUrl, JSONSchema, MaxLength, MinLength, ValidateIf
+Nodes (10): AutopostDto, Integrations, IsArray, IsBoolean, IsDefined, IsOptional, IsString, IsUrl (+2 more)
 
-### Community 158 - "IsSafeWebhookUrl"
-Cohesion: 0.28
-Nodes (8): ImportMediaDto, ImportMediaItemDto, ArrayMinSize, IsDefined, IsString, Type, ValidateNested, IsSafeWebhookUrl()
-
-### Community 159 - "infinite.workflow.register.ts"
-Cohesion: 0.22
-Nodes (5): InfiniteWorkflowRegister, InfiniteWorkflowRegisterModule, Global, Injectable, Module
-
-### Community 160 - "AnalyticsController"
-Cohesion: 0.36
-Nodes (6): AnalyticsController, ApiTags, Controller, Get, Param, Query
-
-### Community 161 - "package.json"
+### Community 181 - "CreatePublicCommentDto"
 Cohesion: 0.25
-Nodes (7): description, name, scripts, build, dev, type, version
+Nodes (10): AddCommentDto, CreatePublicCommentDto, ResolveCommentDto, IsBoolean, IsInt, IsOptional, IsString, MaxLength (+2 more)
 
-### Community 162 - "provider.registry.ts"
-Cohesion: 0.39
-Nodes (5): CookieDefinition, CookieProvider, skoolProvider, getAllProviders(), providerMap
+### Community 184 - "SeedanceParams"
+Cohesion: 0.20
+Nodes (9): Image, Seedance, SeedanceParams, ArrayMaxSize, IsArray, IsString, Type, ValidateNested (+1 more)
 
-### Community 164 - "postWorkflowV106"
-Cohesion: 0.36
+### Community 185 - "get.translation.service.backend.ts"
+Cohesion: 0.29
+Nodes (4): metadata, Page(), getT(), languages
+
+### Community 186 - "postWorkflowV106"
+Cohesion: 0.27
 Nodes (7): {
   getPostsList,
   getPost,
@@ -1087,165 +1320,297 @@ Nodes (7): {
   isCommentable,
 }, iterate, poke, postWorkflowV106(), proxyCheckTaskQueue(), proxyMutationTaskQueue(), proxyTaskQueue()
 
-### Community 165 - "MeweDto"
+### Community 187 - "video.activity.ts"
+Cohesion: 0.24
+Nodes (6): Activity, ActivityMethod, Injectable, VideoActivity, { generateVideo }, generateVideoWorkflow()
+
+### Community 188 - "app.module.ts"
+Cohesion: 0.24
+Nodes (7): activities, AppModule, Module, bootstrap(), Global, Module, VideoModule
+
+### Community 189 - "compilerOptions"
+Cohesion: 0.20
+Nodes (9): compilerOptions, allowSyntheticDefaultImports, declaration, module, removeComments, sourceMap, target, extends (+1 more)
+
+### Community 190 - "media.dto.ts"
+Cohesion: 0.29
+Nodes (3): ValidatorConstraint, ValidUrlExtension, ValidUrlPath
+
+### Community 191 - "custom.upload.validation.ts"
+Cohesion: 0.33
+Nodes (7): megabytes(), uploadWidgetHtml(), { fileTypeStream }, getMaxSize(), maxSizeStream(), UPLOAD_ALLOWED_MIME, uploadStreamToStorage()
+
+### Community 193 - "PinterestSettingsDto"
+Cohesion: 0.20
+Nodes (9): PinterestSettingsDto, IsDefined, IsString, IsUrl, JSONSchema, Matches, MaxLength, MinLength (+1 more)
+
+### Community 194 - "WordpressDto"
+Cohesion: 0.20
+Nodes (10): IsArray, IsDefined, IsIn, IsNumber, IsOptional, IsString, MinLength, Type (+2 more)
+
+### Community 197 - "vite.config.base.ts"
+Cohesion: 0.33
+Nodes (6): crxI18n(), stripDevIcons(), providers, baseBuildOptions, baseManifest, outDir
+
+### Community 198 - "attribution.component.tsx"
+Cohesion: 0.36
+Nodes (6): ReturnUrlComponent, AttributionComponent(), getAttribution(), useAttribution(), useAttributionParams(), RegisterAfter()
+
+### Community 199 - "page.tsx"
+Cohesion: 0.36
+Nodes (6): Auth(), metadata, customFetch(), fetchBackend, Params, internalFetch()
+
+### Community 200 - "forgot-return.tsx"
+Cohesion: 0.25
+Nodes (8): ForgotReturn(), Inputs, ForgotReturnPasswordDto, IsDefined, IsIn, IsString, MinLength, ValidateIf
+
+### Community 201 - "post.content.client.tsx"
+Cohesion: 0.36
+Nodes (8): applyHighlights(), clearHighlights(), HighlightRange, MARK_CLASS, markClassName(), marksOf(), PostContentClient(), textOffset()
+
+### Community 202 - "send.email.workflow.ts"
+Cohesion: 0.28
+Nodes (5): { sendEmail }, { sendEmail: sendBulkEmail }, { sendEmail: sendPriorityEmail }, emailQueues, getTemporalModule()
+
+### Community 203 - "AdminApplyCouponDto"
+Cohesion: 0.22
+Nodes (8): IsInt, AdminApplyCouponDto, IsDefined, IsIn, IsNumber, IsString, Max, Min
+
+### Community 207 - "GoogleProvider"
+Cohesion: 0.46
+Nodes (4): defaultRedirect(), GoogleProvider, makeClient(), AuthProvider
+
+### Community 208 - "package.json"
+Cohesion: 0.25
+Nodes (7): description, name, scripts, build, dev, type, version
+
+### Community 209 - "provider.registry.ts"
+Cohesion: 0.39
+Nodes (5): CookieDefinition, CookieProvider, skoolProvider, getAllProviders(), providerMap
+
+### Community 210 - "connect.link.tsx"
+Cohesion: 0.32
+Nodes (3): ConnectLink(), ConnectLinkDetails, useConnectLink()
+
+### Community 211 - "forgot.tsx"
+Cohesion: 0.32
+Nodes (6): Forgot(), Inputs, ForgotPasswordDto, IsDefined, IsEmail, IsString
+
+### Community 212 - "moltbook.provider.tsx"
+Cohesion: 0.46
+Nodes (4): MoltbookProvider(), web3List, Web3ProviderInterface, timer()
+
+### Community 213 - "twitch.provider.tsx"
+Cohesion: 0.29
+Nodes (6): announcementColors, messageTypes, TwitchSettings(), IsIn, IsOptional, TwitchDto
+
+### Community 214 - "IntegrationTimeDto"
+Cohesion: 0.29
+Nodes (7): IntegrationTimeDto, IntegrationValidateTimeDto, IsArray, IsDefined, IsNumber, Type, ValidateNested
+
+### Community 215 - "FacebookDto"
+Cohesion: 0.25
+Nodes (8): FacebookDto, IsBoolean, IsIn, IsOptional, IsString, IsUrl, JSONSchema, ValidateIf
+
+### Community 216 - "MeweDto"
 Cohesion: 0.25
 Nodes (7): MeweDto, IsIn, IsOptional, IsString, JSONSchema, MinLength, ValidateIf
 
-### Community 166 - "TumblrDto"
+### Community 217 - "AddTeamMemberDto"
 Cohesion: 0.25
-Nodes (7): IsOptional, IsString, Matches, MaxLength, MinLength, ValidateIf, TumblrDto
+Nodes (7): AddTeamMemberDto, IsBoolean, IsDefined, IsEmail, IsIn, IsString, ValidateIf
 
-### Community 167 - "MonitorController"
+### Community 218 - "ImportMediaDto"
+Cohesion: 0.29
+Nodes (7): ImportMediaDto, ImportMediaItemDto, ArrayMinSize, IsDefined, IsString, Type, ValidateNested
+
+### Community 220 - "MonitorController"
 Cohesion: 0.29
 Nodes (5): MonitorController, ApiTags, Controller, Get, Param
 
-### Community 168 - "google.provider.ts"
-Cohesion: 0.57
-Nodes (3): defaultRedirect(), GoogleProvider, makeClient()
+### Community 221 - "posts.validation.exception.ts"
+Cohesion: 0.33
+Nodes (4): PostValidationError, PostValidationException, PostValidationExceptionFilter, Catch
 
-### Community 170 - "isGeneralServerSide"
+### Community 222 - "removeAuth"
+Cohesion: 0.33
+Nodes (4): removeAuth(), HttpExceptionFilter, HttpForbiddenException, Catch
+
+### Community 223 - "testimonial.component.tsx"
+Cohesion: 0.43
+Nodes (3): Testimonial(), testimonials1, testimonials2
+
+### Community 224 - "plugs.context.ts"
+Cohesion: 0.33
+Nodes (5): FieldsInterface, PlugInterface, PlugsContext, PlugSettings, PlugsInterface
+
+### Community 225 - "LoginUserDto"
 Cohesion: 0.29
-Nodes (3): metadata, metadata, isGeneralServerSide()
+Nodes (6): LoginUserDto, IsDefined, IsEmail, IsString, MinLength, ValidateIf
 
-### Community 171 - "DribbbleDto"
-Cohesion: 0.29
-Nodes (6): DribbbleDto, IsDefined, IsOptional, IsString, IsUrl, MinLength
+### Community 226 - "PlugDto"
+Cohesion: 0.38
+Nodes (6): FieldsDto, PlugDto, IsDefined, IsString, Type, ValidateNested
 
-### Community 172 - "FarcasterDto"
+### Community 227 - "farcaster.dto.ts"
 Cohesion: 0.38
 Nodes (6): FarcasterDto, FarcasterId, FarcasterValue, IsString, Type, ValidateNested
 
-### Community 173 - "GmbSettingsDto"
+### Community 228 - "WhopDto"
 Cohesion: 0.29
-Nodes (6): GmbSettingsDto, IsIn, IsOptional, IsString, IsUrl, ValidateIf
+Nodes (6): IsDefined, IsOptional, IsString, JSONSchema, MinLength, WhopDto
 
-### Community 174 - "AddTeamMemberDto"
-Cohesion: 0.29
-Nodes (7): AddTeamMemberDto, IsBoolean, IsDefined, IsEmail, IsIn, IsString, ValidateIf
-
-### Community 176 - "Veo3Params"
-Cohesion: 0.29
-Nodes (7): Image, ArrayMaxSize, IsArray, IsString, Type, ValidateNested, Veo3Params
-
-### Community 177 - "ForgotPasswordDto"
-Cohesion: 0.33
-Nodes (4): ForgotPasswordDto, IsDefined, IsEmail, IsString
-
-### Community 178 - "ResendActivationDto"
-Cohesion: 0.33
-Nodes (4): ResendActivationDto, IsDefined, IsEmail, IsString
-
-### Community 179 - "testimonial.component.tsx"
-Cohesion: 0.53
-Nodes (3): Testimonial(), testimonials1, testimonials2
-
-### Community 180 - "HealthController"
+### Community 231 - "HealthController"
 Cohesion: 0.33
 Nodes (4): HealthController, Controller, Get, Res
 
-### Community 181 - ".eslintrc.json"
+### Community 232 - ".eslintrc.json"
 Cohesion: 0.33
 Nodes (5): extends, ignorePatterns, !**/*, ../../.eslintrc.json, overrides
 
-### Community 182 - "StarsListDto"
+### Community 233 - "StarsListDto"
 Cohesion: 0.33
 Nodes (5): StarsListDto, IsDefined, IsIn, IsNumber, IsOptional
 
-### Community 183 - "GetNotificationsDto"
+### Community 234 - "GeneratorDto"
+Cohesion: 0.33
+Nodes (5): GeneratorDto, IsBoolean, IsIn, IsString, MinLength
+
+### Community 235 - "SaveMediaInformationDto"
+Cohesion: 0.33
+Nodes (5): SaveMediaInformationDto, IsNumber, IsString, IsUrl, ValidateIf
+
+### Community 236 - "UploadDto"
+Cohesion: 0.33
+Nodes (6): IsBoolean, IsDefined, IsOptional, IsString, Validate, UploadDto
+
+### Community 237 - "GetNotificationsDto"
 Cohesion: 0.33
 Nodes (5): GetNotificationsDto, IsNumber, IsOptional, Min, Transform
 
-### Community 184 - "FacebookDto"
+### Community 238 - "ListmonkDto"
 Cohesion: 0.33
-Nodes (6): FacebookDto, IsIn, IsOptional, IsString, IsUrl, ValidateIf
+Nodes (5): ListmonkDto, IsOptional, IsString, JSONSchema, MinLength
 
-### Community 185 - "SkoolDto"
+### Community 239 - "AdminAddTeamMemberDto"
 Cohesion: 0.33
-Nodes (5): SkoolDto, IsDefined, IsString, JSONSchema, MinLength
+Nodes (5): AdminAddTeamMemberDto, IsDefined, IsEmail, IsIn, IsString
 
-### Community 186 - ".eslintrc.json"
+### Community 240 - ".eslintrc.json"
 Cohesion: 0.33
 Nodes (5): extends, ignorePatterns, !**/*, ../../.eslintrc.json, overrides
 
-### Community 187 - "RootController"
+### Community 241 - "RootController"
 Cohesion: 0.40
 Nodes (3): RootController, Controller, Get
 
-### Community 190 - "RefreshTokens"
-Cohesion: 0.40
-Nodes (3): RefreshTokens, Command, Injectable
-
-### Community 191 - "matches"
+### Community 242 - "matches"
 Cohesion: 0.40
 Nodes (5): externally_connectable, matches, http://localhost/*, https://localhost/*, https://*.postiz.com/*
 
-### Community 192 - "sanitize.post.content.ts"
-Cohesion: 0.40
-Nodes (4): Auth(), ALLOWED_ATTR, ALLOWED_TAGS, sanitizePostContent()
+### Community 246 - "creation.method.badge.tsx"
+Cohesion: 0.50
+Nodes (4): CreationMethod, CreationMethodBadge(), Props, tooltipFor()
 
-### Community 195 - "agent.input.tsx"
-Cohesion: 0.40
-Nodes (3): Input(), AutoResizingTextarea, AutoResizingTextareaProps
+### Community 247 - "dnd.provider.tsx"
+Cohesion: 0.50
+Nodes (4): CalendarBackend(), DNDProvider(), DRAG_HANDLERS, isInsideEditor()
 
-### Community 196 - "mention.component.tsx"
-Cohesion: 0.70
-Nodes (4): debounce(), MentionList(), suggestion(), updatePosition()
+### Community 249 - "digest.email.workflow.ts"
+Cohesion: 0.60
+Nodes (3): Email, emailSignal, { getUserOrgs, sendEmailAsync }
 
-### Community 197 - "eslint.config.mjs"
+### Community 250 - "eslint.config.mjs"
 Cohesion: 0.40
 Nodes (4): compat, __dirname, eslintConfig, __filename
 
-### Community 198 - "agent.module.ts"
+### Community 252 - "ResendActivationDto"
 Cohesion: 0.40
-Nodes (3): AgentModule, Global, Module
+Nodes (4): ResendActivationDto, IsDefined, IsEmail, IsString
 
-### Community 200 - "server.js"
+### Community 253 - "ConnectIntegrationDto"
+Cohesion: 0.40
+Nodes (4): ConnectIntegrationDto, IsDefined, IsOptional, IsString
+
+### Community 254 - "ConnectLinkDto"
+Cohesion: 0.40
+Nodes (5): ConnectLinkDto, IsDefined, IsIn, IsOptional, IsUrl
+
+### Community 255 - "ExtractContentService"
+Cohesion: 0.50
+Nodes (3): ExtractContentService, findDepth(), Injectable
+
+### Community 256 - "server.js"
 Cohesion: 0.40
 Nodes (4): fs, http, path, server
 
-### Community 202 - "fetch-gtm.mjs"
+### Community 257 - "fetch-gtm.mjs"
 Cohesion: 0.50
 Nodes (3): __dirname, envPath, outPath
 
-### Community 203 - "route.ts"
+### Community 258 - "route.ts"
 Cohesion: 0.83
 Nodes (3): GET(), iteratorToStream(), nodeStreamToIterator()
 
-### Community 206 - "exclude"
+### Community 262 - "ApiKeyDto"
+Cohesion: 0.50
+Nodes (3): ApiKeyDto, IsString, MinLength
+
+### Community 263 - "CustomerNameDto"
+Cohesion: 0.50
+Nodes (3): CustomerNameDto, IsString, MinLength
+
+### Community 264 - "IntegrationFunctionDto"
+Cohesion: 0.50
+Nodes (3): IntegrationFunctionDto, IsDefined, IsString
+
+### Community 265 - "IntegrationNameDto"
+Cohesion: 0.50
+Nodes (3): IntegrationNameDto, IsDefined, IsString
+
+### Community 266 - "exclude"
 Cohesion: 0.50
 Nodes (3): tmp, exclude, node_modules
 
-### Community 207 - "install.js"
+### Community 267 - "install.js"
 Cohesion: 0.50
 Nodes (3): { execSync }, fs, path
 
-### Community 227 - "@nestjs/common"
+### Community 282 - "@copilotkit/react-ui"
+Cohesion: 0.67
+Nodes (3): @copilotkit/react-ui, @copilotkit/react-core, @copilotkit/react-ui
+
+### Community 288 - "ImagesSlidesParams"
+Cohesion: 0.67
+Nodes (3): ImagesSlidesParams, IsString, JSONSchema
+
+### Community 289 - "@nestjs/common"
 Cohesion: 0.67
 Nodes (3): @nestjs/common, nestjs-command, @nestjs/common
 
-### Community 228 - "lib"
+### Community 290 - "lib"
 Cohesion: 0.67
 Nodes (3): es2020, lib, dom
 
 ## Knowledge Gaps
-- **1064 isolated node(s):** `$schema`, `Read(./.env)`, `Edit(./.env)`, `Bash(cat .env)`, `Bash(less .env)` (+1059 more)
+- **1146 isolated node(s):** `$schema`, `Read(./.env)`, `Edit(./.env)`, `Bash(cat .env)`, `Bash(less .env)` (+1141 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **284 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **259 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `bcrypt` connect `overrides` to `database.module.ts`?**
-  _High betweenness centrality (0.159) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `package.json`, `overrides`, `@nestjs/common`, `accept-language`, `@ag-ui/mastra`, `array-move`, `async-mutex`, `@atproto/api`, `@aws-sdk/client-s3`, `@aws-sdk/s3-request-presigner`, `axios`, `bottleneck`, `bs58`, `bufferutil`, `canvas`, `@casl/ability`, `chart.js`, `class-transformer`, `class-validator`, `class-validator-jsonschema`, `clsx`, `compression`, `concat-stream`, `cookie-parser`, `@copilotkit/react-textarea`, `@copilotkit/runtime`, `copy-to-clipboard`, `crypto-hash`, `dayjs`, `dotenv`, `emoji-picker-react`, `evp_bytestokey`, `facebook-nodejs-business-sdk`, `fast-xml-parser`, `file-type`, `google-auth-library`, `googleapis`, `@hookform/resolvers`, `i18n-iso-countries`, `i18next`, `i18next-resources-to-backend`, `ioredis`, `isomorphic-dompurify`, `json-to-graphql-query`, `jsonwebtoken`, `@langchain/community`, `@langchain/core`, `@langchain/langgraph`, `@langchain/openai`, `@langchain/tavily`, `lodash`, `@mantine/core`, `@mantine/hooks`, `@mantine/modals`, `mastra`, `@mastra/core`, `@mastra/mcp`, `@mastra/memory`, `@meronex/icons`, `mime`, `mime-types`, `@modelcontextprotocol/sdk`, `multer`, `music-metadata`, `@nest-lab/throttler-storage-redis`, `@nestjs/cli`, `@nestjs/microservices`, `@nestjs/platform-express`, `nestjs-real-ip`, `@nestjs/schedule`, `@nestjs/swagger`, `nestjs-temporal-core`, `@nestjs/throttler`, `next`, `@neynar/nodejs-sdk`, `@neynar/react`, `node-fetch`, `node-telegram-bot-api`, `nodemailer`, `nostr-tools`, `openai`, `p-limit`, `parse5`, `@pigment-css/react`, `polotno`, `posthog-js`, `@postiz/wallets`, `@prisma/client`, `react`, `react-colorful`, `react-country-flag`, `react-dnd`, `react-dnd-html5-backend`, `react-dom`, `react-dropzone`, `react-hook-form`, `react-hotkeys-hook`, `react-i18next`, `react-loading`, `react-sortablejs`, `react-tag-autocomplete`, `react-tooltip`, `react-use-cookie`, `react-use-keypress`, `redis`, `reflect-metadata`, `remove-markdown`, `rxjs`, `sass`, `@sentry/nestjs`, `@sentry/nextjs`, `@sentry/profiling-node`, `@sentry/react`, `sha256`, `sharp`, `simple-statistics`, `slugify`, `@solana/wallet-adapter-react`, `@solana/wallet-adapter-react-ui`, `stripe`, `@stripe/stripe-js`, `striptags`, `subtitle`, `@swc/helpers`, `sweetalert2`, `@sweetalert2/theme-dark`, `swr`, `tailwind-scrollbar`, `tailwindcss`, `@tailwindcss/postcss`, `tailwindcss-rtl`, `@temporalio/activity`, `@temporalio/client`, `@temporalio/common`, `@temporalio/worker`, `@temporalio/workflow`, `timezones-list`, `tippy.js`, `@tiptap/extension-document`, `@tiptap/extension-history`, `@tiptap/extension-paragraph`, `@tiptap/extension-underline`, `@tiptap/pm`, `@tiptap/react`, `@tiptap/starter-kit`, `@tiptap/suggestion`, `tldts`, `transloadit`, `tslib`, `tweetnacl`, `twitter-api-v2`, `twitter-text`, `@types/bcrypt`, `@types/concat-stream`, `@types/facebook-nodejs-business-sdk`, `@types/lodash`, `@types/md5`, `@types/mime`, `@types/mime-types`, `@types/multer`, `@types/nodemailer`, `@types/parse5`, `@types/react-dropzone`, `@types/remove-markdown`, `@types/sha256`, `@types/striptags`, `@types/yup`, `@uidotdev/usehooks`, `@uiw/react-md-editor`, `@uppy/aws-s3`, `@uppy/compressor`, `@uppy/core`, `@uppy/drag-drop`, `@uppy/file-input`, `@uppy/progress-bar`, `@uppy/react`, `@uppy/status-bar`, `@uppy/transloadit`, `@uppy/xhr-upload`, `use-debounce`, `utf-8-validate`, `uuid`, `viem`, `webextension-polyfill`, `ws`, `yargs`, `yup`, `zod`, `zustand`?**
-  _High betweenness centrality (0.151) - this node is a cross-community bridge._
-- **Why does `bcrypt` connect `overrides` to `dependencies`?**
-  _High betweenness centrality (0.140) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `overrides`, `package.json`, `@copilotkit/react-ui`, `@nestjs/common`, `accept-language`, `@ag-ui/mastra`, `@atproto/api`, `@aws-sdk/client-kms`, `@aws-sdk/client-s3`, `@aws-sdk/client-sesv2`, `@aws-sdk/lib-storage`, `@aws-sdk/s3-request-presigner`, `axios`, `bs58`, `bufferutil`, `canvas`, `@casl/ability`, `chart.js`, `class-transformer`, `class-validator`, `class-validator-jsonschema`, `clsx`, `compression`, `cookie-parser`, `@copilotkit/react-textarea`, `@copilotkit/runtime`, `@copilotkit/runtime-client-gql`, `dotenv`, `dotenv-cli`, `@dub/analytics`, `emoji-picker-react`, `google-auth-library`, `googleapis`, `@hookform/resolvers`, `hot-reload-extension-vite`, `i18n-iso-countries`, `i18next`, `i18next-browser-languagedetector`, `i18next-resources-to-backend`, `image-to-pdf`, `ioredis`, `isomorphic-dompurify`, `json-to-graphql-query`, `jsonwebtoken`, `@langchain/community`, `@langchain/core`, `@langchain/langgraph`, `@langchain/openai`, `@langchain/tavily`, `lodash`, `@mantine/core`, `@mantine/dates`, `@mantine/hooks`, `@mastra/client-js`, `@mastra/core`, `@mastra/mcp`, `@mastra/pg`, `@meronex/icons`, `mime`, `mime-types`, `@modelcontextprotocol/sdk`, `multer`, `music-metadata`, `@nest-lab/throttler-storage-redis`, `@nestjs/cli`, `@nestjs/core`, `@nestjs/microservices`, `@nestjs/platform-express`, `nestjs-real-ip`, `@nestjs/swagger`, `nestjs-temporal-core`, `@nestjs/throttler`, `next`, `next-plausible`, `@neynar/nodejs-sdk`, `node-fetch`, `nodemailer`, `nostr-tools`, `openai`, `p-limit`, `parse5`, `polotno`, `@postiz/wallets`, `@prisma/client`, `qrcode`, `react`, `react-colorful`, `react-country-flag`, `react-dnd`, `react-dnd-html5-backend`, `react-dom`, `react-dropzone`, `react-hook-form`, `react-hotkeys-hook`, `react-sortablejs`, `react-tag-autocomplete`, `react-tooltip`, `react-use-cookie`, `react-use-keypress`, `reflect-metadata`, `remove-markdown`, `resend`, `rxjs`, `sass`, `@sentry/nestjs`, `@sentry/nextjs`, `@sentry/profiling-node`, `@sentry/react`, `sha256`, `sharp`, `@solana/wallet-adapter-react-ui`, `@stripe/react-stripe-js`, `@stripe/stripe-js`, `subtitle`, `@swc/helpers`, `swr`, `tailwind-scrollbar`, `tailwindcss-rtl`, `@temporalio/activity`, `@temporalio/client`, `@temporalio/common`, `@temporalio/worker`, `@temporalio/workflow`, `timezones-list`, `@tiptap/extension-document`, `@tiptap/extension-history`, `@tiptap/extension-paragraph`, `@tiptap/extension-underline`, `@tiptap/pm`, `@tiptap/react`, `@tiptap/suggestion`, `transloadit`, `tslib`, `tweetnacl`, `twitter-api-v2`, `twitter-text`, `@types/bcrypt`, `@types/jsonwebtoken`, `@types/lodash`, `@types/mime`, `@types/mime-types`, `@types/multer`, `@types/nodemailer`, `@types/parse5`, `@types/react-dropzone`, `@types/remove-markdown`, `@types/sha256`, `@types/striptags`, `@types/yup`, `@uidotdev/usehooks`, `@uppy/aws-s3`, `@uppy/compressor`, `@uppy/core`, `@uppy/dashboard`, `@uppy/drag-drop`, `@uppy/file-input`, `@uppy/progress-bar`, `@uppy/react`, `@uppy/status-bar`, `@uppy/transloadit`, `@uppy/xhr-upload`, `use-debounce`, `utf-8-validate`, `uuid`, `viem`, `ws`, `yargs`, `yup`, `zustand`?**
+  _High betweenness centrality (0.104) - this node is a cross-community bridge._
+- **Why does `uuid` connect `uuid` to `dependencies`, `database.module.ts`?**
+  _High betweenness centrality (0.058) - this node is a cross-community bridge._
 - **What connects `$schema`, `Read(./.env)`, `Edit(./.env)` to the rest of the system?**
-  _1064 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `useT` be split into smaller, more focused modules?**
-  _Cohesion score 0.03237478575509427 - nodes in this community are weakly interconnected._
-- **Should `makeId` be split into smaller, more focused modules?**
-  _Cohesion score 0.04950360397116823 - nodes in this community are weakly interconnected._
-- **Should `IntegrationService` be split into smaller, more focused modules?**
-  _Cohesion score 0.028954802259887006 - nodes in this community are weakly interconnected._
+  _1146 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `useModals` be split into smaller, more focused modules?**
+  _Cohesion score 0.032231404958677684 - nodes in this community are weakly interconnected._
+- **Should `.fetch` be split into smaller, more focused modules?**
+  _Cohesion score 0.02669717772692601 - nodes in this community are weakly interconnected._
+- **Should `PostResponse` be split into smaller, more focused modules?**
+  _Cohesion score 0.10257558790593505 - nodes in this community are weakly interconnected._
+- **Should `tools` be split into smaller, more focused modules?**
+  _Cohesion score 0.05464725643896976 - nodes in this community are weakly interconnected._
